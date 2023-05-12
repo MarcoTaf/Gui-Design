@@ -6,12 +6,13 @@ import java.io.IOException;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.scene.control.Button;
+import se.chalmers.cse.dat216.project.Product;
 
 
 
 public class ProductCardController extends AnchorPane
    {
-
+       private Product targetProduct;
        @FXML
        public ImageView productImage;
        @FXML
@@ -30,7 +31,7 @@ public class ProductCardController extends AnchorPane
        public Button productAddToAdd;
        @FXML
        public Button productAddToCart;
-       public ProductCardController() {
+       public ProductCardController(Product targetProduct) {
            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProductCard.fxml"));
            fxmlLoader.setRoot(this);
            fxmlLoader.setController(this);
@@ -40,6 +41,14 @@ public class ProductCardController extends AnchorPane
            } catch (IOException exception) {
                throw new RuntimeException(exception);
            }
+
+           this.targetProduct = targetProduct;
+           loadTargetProduct(this.targetProduct);
+       }
+
+       private void loadTargetProduct(Product targetProduct)
+       {
+           productName.setText(targetProduct.getName());
        }
 
 }
