@@ -1,4 +1,4 @@
-package imat.resources;
+package imat;
 
 import javafx.fxml.FXMLLoader;
 
