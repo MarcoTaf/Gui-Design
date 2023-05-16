@@ -27,13 +27,10 @@ public class MainViewController implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
 
-        try {
-            //FXMLLoader.load(getClass().getResource("Startvy.fxml"));
-            startStackPane.getChildren().add(new StartViewController());
-            toolbarAnchorPane.getChildren().add(FXMLLoader.load(getClass().getResource("Toolbar.fxml")));
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
+
+        startStackPane.getChildren().add(new StartViewController());
+        toolbarAnchorPane.getChildren().add(new ToolbarController());
+
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
