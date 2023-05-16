@@ -19,6 +19,8 @@ public class MainViewController implements Initializable {
     @FXML
     public StackPane startViewStackPane;
     @FXML
+    public AnchorPane toolbarAnchorPane;
+    @FXML
     Label pathLabel;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -26,14 +28,15 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         try {
-            startViewStackPane.getChildren().setAll(FXMLLoader.load(getClass().getResource("main.fxml")));
+            startViewStackPane.getChildren().add(FXMLLoader.load(getClass().getResource("Startvy.fxml")));
+            toolbarAnchorPane.getChildren().add(FXMLLoader.load(getClass().getResource("Toolbar.fxml")));
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
-        pathLabel.setText(iMatDirectory);
+
     }
 
     private void loadViews()
