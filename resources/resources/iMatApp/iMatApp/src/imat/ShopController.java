@@ -1,23 +1,15 @@
 package imat;
 
+import com.sun.tools.javac.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class ShopController extends AnchorPane {
-    public ShopController()
+public class ShopController extends SubViewController {
+    private MainViewController parent;
+    public ShopController(MainViewController owner)
     {
-        {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Kategorilista.fxml"));
-            fxmlLoader.setRoot(this);
-            fxmlLoader.setController(this);
-
-            try {
-                fxmlLoader.load();
-            } catch (IOException exception) {
-                throw new RuntimeException(exception);
-            }
-        }
+        super("Kategorilista.fxml", owner);
     }
 }

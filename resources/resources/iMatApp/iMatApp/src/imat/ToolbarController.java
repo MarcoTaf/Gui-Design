@@ -1,5 +1,6 @@
 package imat;
 
+import com.sun.tools.javac.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -7,19 +8,13 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class ToolbarController extends AnchorPane {
+public class ToolbarController extends SubViewController {
+    private MainViewController parent;
     @FXML
     public Button HomeButton;
 
-    public ToolbarController()
+    public ToolbarController(MainViewController owner)
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Toolbar.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
+        super("Toolbar.fxml", owner);
     }
 }

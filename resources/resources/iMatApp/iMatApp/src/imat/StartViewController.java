@@ -7,25 +7,17 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 
-public class StartViewController extends AnchorPane {
+public class StartViewController extends SubViewController {
 
     @FXML
     public Button startShoppingButton;
-    public StartViewController()
+    public StartViewController(MainViewController owner)
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Startvy.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
-
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
+        super("Startvy.fxml", owner);
     }
 
     public void shopPressed()
     {
-        System.out.println("Shop Pressed");
+        owner.switchView(MainViewController.view.shop);
     }
 }

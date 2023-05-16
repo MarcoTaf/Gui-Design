@@ -27,12 +27,17 @@ public class MainViewController implements Initializable {
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
+    enum view {
+        start,
+        shop
+    }
+
     public void initialize(URL url, ResourceBundle rb) {
 
 
-        startStackPane.getChildren().add(new StartViewController());
-        shopStackPane.getChildren().add(new ShopController());
-        toolbarAnchorPane.getChildren().add(new ToolbarController());
+        startStackPane.getChildren().add(new StartViewController(this));
+        shopStackPane.getChildren().add(new ShopController(this));
+        toolbarAnchorPane.getChildren().add(new ToolbarController(this));
 
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
@@ -40,11 +45,19 @@ public class MainViewController implements Initializable {
 
     }
 
-    private void loadViews()
+    public void switchView(view target)
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("StartVy.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
+        switch (target)
+        {
+            case start:
+                startStackPane.toFront();
+                break;
+            case shop:
+                shopStackPane.toFront();
+                break;
+            default:
+                break;
+        }
     }
 
 
