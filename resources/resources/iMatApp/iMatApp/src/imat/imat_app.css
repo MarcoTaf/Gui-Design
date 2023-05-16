@@ -43,3 +43,15 @@
      -fx-border-radius: 1px;
      -fx-background-color: #ff0000;
 }
+
+.start-button{
+    -fx-background-radius: 4em;
+    -fx-border-radius:4em;
+    -fx-background:none;
+    -fx-border-color: #79747E;
+    -fx-border-width:5px;
+}
+
+.invisible-button{
+    -fx-background:node;
+}

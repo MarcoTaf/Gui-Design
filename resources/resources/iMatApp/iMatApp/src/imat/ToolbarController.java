@@ -17,4 +17,8 @@ public class ToolbarController extends SubViewController {
     {
         super("Toolbar.fxml", owner);
     }
+
+    public void homePressed() {
+        owner.switchView(MainViewController.view.start);
+    }
 }
