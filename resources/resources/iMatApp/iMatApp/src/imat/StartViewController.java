@@ -23,4 +23,9 @@ public class StartViewController extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
+
+    public void shopPressed()
+    {
+        System.out.println("Shop Pressed");
+    }
 }

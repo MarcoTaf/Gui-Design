@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #F2EEE8;" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="startShoppingButton" layoutX="395.0" layoutY="150.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="250.0" styleClass="button-add-to-cart" text="Button" />
+      <Button fx:id="startShoppingButton" layoutX="395.0" layoutY="150.0" mnemonicParsing="false" onAction="#shopPressed" prefHeight="250.0" prefWidth="250.0" styleClass="button-add-to-cart" text="Button" />
       <Button layoutX="695.0" layoutY="150.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="250.0" styleClass="button-add-to-cart" text="Button" />
       <Button layoutX="1010.0" layoutY="150.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="250.0" styleClass="button-add-to-cart" text="Button" />
       <Button layoutX="1310.0" layoutY="150.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="250.0" styleClass="button-add-to-cart" text="Button" />

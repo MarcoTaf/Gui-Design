@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ToolbarController extends AnchorPane {
     @FXML
-    public Button ToolbarHome;
+    public Button HomeButton;
 
     public ToolbarController()
     {
