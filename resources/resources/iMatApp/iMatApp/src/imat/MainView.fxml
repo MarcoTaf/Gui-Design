@@ -11,8 +11,7 @@
             <AnchorPane fx:id="toolbarAnchorPane" prefHeight="195.0" prefWidth="600.0" />
             <AnchorPane prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: #FF0000;" VBox.vgrow="ALWAYS">
                <children>
-                  <StackPane fx:id="startViewStackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                     
+                  <StackPane fx:id="startStackPane" prefHeight="664.0" prefWidth="1251.0" />
                </children>
             </AnchorPane>
          </children>

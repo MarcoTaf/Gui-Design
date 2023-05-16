@@ -17,7 +17,7 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class MainViewController implements Initializable {
     @FXML
-    public StackPane startViewStackPane;
+    public StackPane startStackPane;
     @FXML
     public AnchorPane toolbarAnchorPane;
     @FXML
@@ -28,7 +28,8 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         try {
-            startViewStackPane.getChildren().add(FXMLLoader.load(getClass().getResource("Startvy.fxml")));
+            //FXMLLoader.load(getClass().getResource("Startvy.fxml"));
+            startStackPane.getChildren().add(new StartViewController());
             toolbarAnchorPane.getChildren().add(FXMLLoader.load(getClass().getResource("Toolbar.fxml")));
         } catch (IOException exception) {
             throw new RuntimeException(exception);
