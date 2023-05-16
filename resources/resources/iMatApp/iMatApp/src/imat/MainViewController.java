@@ -19,6 +19,8 @@ public class MainViewController implements Initializable {
     @FXML
     public StackPane startStackPane;
     @FXML
+    public StackPane shopStackPane;
+    @FXML
     public AnchorPane toolbarAnchorPane;
     @FXML
     Label pathLabel;
@@ -29,6 +31,7 @@ public class MainViewController implements Initializable {
 
 
         startStackPane.getChildren().add(new StartViewController());
+        shopStackPane.getChildren().add(new ShopController());
         toolbarAnchorPane.getChildren().add(new ToolbarController());
 
 
