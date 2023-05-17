@@ -36,7 +36,7 @@
                   </image>
                </ImageView>
             </graphic></Button>
-      <Button layoutX="1310.0" layoutY="150.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
+      <Button fx:id="prrofileShoppingButton" layoutX="1310.0" layoutY="150.0" mnemonicParsing="false" onAction="#profilePressed" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
             <graphic>
                <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                   <image>

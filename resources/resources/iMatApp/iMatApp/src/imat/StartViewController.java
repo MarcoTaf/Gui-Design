@@ -11,6 +11,8 @@ public class StartViewController extends SubViewController {
 
     @FXML
     public Button startShoppingButton;
+    @FXML
+    public Button rrofileShoppingButton;
     public StartViewController(MainViewController owner)
     {
         super("Startvy.fxml", owner);
@@ -19,5 +21,10 @@ public class StartViewController extends SubViewController {
     public void shopPressed()
     {
         owner.switchView(MainViewController.view.shop);
+    }
+
+    public void profilePressed()
+    {
+        owner.switchView(MainViewController.view.profile);
     }
 }

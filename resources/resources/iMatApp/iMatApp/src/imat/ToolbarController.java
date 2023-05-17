@@ -11,7 +11,11 @@ import java.io.IOException;
 public class ToolbarController extends SubViewController {
     private MainViewController parent;
     @FXML
-    public Button HomeButton;
+    public Button ToolbarHome;
+    @FXML
+    public Button ToolbarProfile;
+    @FXML
+    public Button ToolbarLogo;
 
     public ToolbarController(MainViewController owner)
     {
@@ -20,5 +24,14 @@ public class ToolbarController extends SubViewController {
 
     public void homePressed() {
         owner.switchView(MainViewController.view.start);
+    }
+
+    public void profilePressed() {
+        owner.switchView(MainViewController.view.profile);
+    }
+
+    public void returnPressed()
+    {
+        owner.returnView();
     }
 }

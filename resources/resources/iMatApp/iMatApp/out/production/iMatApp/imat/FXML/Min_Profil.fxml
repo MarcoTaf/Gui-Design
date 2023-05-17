@@ -30,7 +30,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <TextField layoutX="1100.0" layoutY="505.0" prefHeight="70.0" prefWidth="170.0" styleClass="toolbar-search" text="Postnr" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="505.0">
+      <TextField layoutX="1100.0" layoutY="428.0" prefHeight="70.0" prefWidth="170.0" styleClass="toolbar-search" text="Postnr" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="428.0">
          <font>
             <Font size="36.0" />
          </font>
@@ -45,12 +45,12 @@
             <Font size="36.0" />
          </font>
       </TextField>
-      <TextField layoutX="1100.0" layoutY="365.0" prefHeight="70.0" prefWidth="600.0" styleClass="toolbar-search" text="Gatuaddress" AnchorPane.leftAnchor="1100.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="365.0">
+      <TextField layoutX="1100.0" layoutY="305.0" prefHeight="70.0" prefWidth="600.0" styleClass="toolbar-search" text="Gatuaddress" AnchorPane.leftAnchor="1100.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="305.0">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <TextField layoutX="1350.0" layoutY="505.0" prefHeight="70.0" prefWidth="350.0" styleClass="toolbar-search" text="Postort" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="505.0">
+      <TextField layoutX="1350.0" layoutY="428.0" prefHeight="77.0" prefWidth="393.0" styleClass="toolbar-search" text="Postort" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="428.0">
          <font>
             <Font size="36.0" />
          </font>
