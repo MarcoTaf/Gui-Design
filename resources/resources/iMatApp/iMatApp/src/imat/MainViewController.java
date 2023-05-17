@@ -19,6 +19,8 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class MainViewController implements Initializable {
 
+    private MyInfoController myInfoController;
+
     private ArrayList<view> previousView = new ArrayList<view>();
     private view currentView = null;
     @FXML
@@ -41,12 +43,12 @@ public class MainViewController implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle rb) {
-
+        myInfoController = new MyInfoController(this);
 
         startStackPane.getChildren().add(new StartViewController(this));
         shopStackPane.getChildren().add(new ShopController(this));
         toolbarAnchorPane.getChildren().add(new ToolbarController(this));
-        myInfoStackPane.getChildren().add(new MyInfoController(this));
+        myInfoStackPane.getChildren().add(myInfoController);
 
 
         switchView(view.start);
@@ -55,23 +57,48 @@ public class MainViewController implements Initializable {
 
 
     }
+    private boolean canSwitchView()
+    {
+        if (currentView == null)//So why can this not just go under default? Be reasonable now.
+        {
+            return true;
+        }
+
+        switch(currentView)
+        {
+            case profile:
+                if(myInfoController.checkFieldsChanged())
+                {
+                    return false;
+                }
+                break;
+            default:
+                break;
+        }
+
+        return true;
+    }
 
     public void returnView()
     {
-        if (previousView.size() > 0)
+        if (canSwitchView())
         {
-            view target = previousView.get(previousView.size() - 1);
-            previousView.remove(previousView.size() - 1);
-            executeViewSwitch(target);
+            if (previousView.size() > 0) {
+                view target = previousView.get(previousView.size() - 1);
+                previousView.remove(previousView.size() - 1);
+                executeViewSwitch(target);
+            }
         }
     }
-    public void switchView(view target)
-    {
-        if (!(currentView == null))
+    public void switchView(view target) {
+        if (canSwitchView())
         {
-            previousView.add(currentView);
+            if (!(currentView == null)) {
+                previousView.add(currentView);
+            }
+            executeViewSwitch(target);
         }
-        executeViewSwitch(target);
+
     }
     private void executeViewSwitch(view target)
     {

@@ -20,7 +20,7 @@
             <Font size="64.0" />
          </font>
       </Label>
-      <TextField layoutX="250.0" layoutY="305.0" prefHeight="70.0" prefWidth="200.0" styleClass="toolbar-search" text="Namn" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="305.0">
+      <TextField fx:id="firstNameField" layoutX="250.0" layoutY="305.0" prefHeight="70.0" prefWidth="200.0" promptText="Namn" styleClass="toolbar-search" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="305.0">
          <font>
             <Font size="36.0" />
          </font>
@@ -30,27 +30,27 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <TextField layoutX="1100.0" layoutY="428.0" prefHeight="70.0" prefWidth="170.0" styleClass="toolbar-search" text="Postnr" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="428.0">
+      <TextField fx:id="postNumField" layoutX="1100.0" layoutY="428.0" prefHeight="70.0" prefWidth="170.0" promptText="Postnr" styleClass="toolbar-search" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="428.0">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <TextField layoutX="257.0" layoutY="428.0" prefHeight="70.0" prefWidth="600.0" styleClass="toolbar-search" text="Mailadress" AnchorPane.leftAnchor="257.0" AnchorPane.rightAnchor="1093.0" AnchorPane.topAnchor="428.0">
+      <TextField fx:id="mailField" layoutX="257.0" layoutY="428.0" prefHeight="70.0" prefWidth="600.0" promptText="Mailadress" styleClass="toolbar-search" AnchorPane.leftAnchor="257.0" AnchorPane.rightAnchor="1093.0" AnchorPane.topAnchor="428.0">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <TextField layoutX="250.0" layoutY="555.0" prefHeight="70.0" prefWidth="600.0" styleClass="toolbar-search" text="Telefonnr" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="1100.0" AnchorPane.topAnchor="555.0">
+      <TextField fx:id="telField" layoutX="250.0" layoutY="555.0" prefHeight="70.0" prefWidth="600.0" promptText="Telefonnr" styleClass="toolbar-search" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="1100.0" AnchorPane.topAnchor="555.0">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <TextField layoutX="1100.0" layoutY="305.0" prefHeight="70.0" prefWidth="600.0" styleClass="toolbar-search" text="Gatuaddress" AnchorPane.leftAnchor="1100.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="305.0">
+      <TextField fx:id="addressField" layoutX="1100.0" layoutY="305.0" prefHeight="70.0" prefWidth="600.0" promptText="Gatuaddress" styleClass="toolbar-search" AnchorPane.leftAnchor="1100.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="305.0">
          <font>
             <Font size="36.0" />
          </font>
       </TextField>
-      <TextField layoutX="1350.0" layoutY="428.0" prefHeight="77.0" prefWidth="393.0" styleClass="toolbar-search" text="Postort" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="428.0">
+      <TextField fx:id="postOrtField" layoutX="1350.0" layoutY="428.0" prefHeight="77.0" prefWidth="393.0" promptText="Postort" styleClass="toolbar-search" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="428.0">
          <font>
             <Font size="36.0" />
          </font>
@@ -60,12 +60,12 @@
             <Font size="36.0" />
          </font>
       </Label>
-         <TextField layoutX="487.0" layoutY="305.0" prefHeight="77.0" prefWidth="331.0" styleClass="toolbar-search" text="Efternamn">
+         <TextField fx:id="lastNameField" layoutX="487.0" layoutY="305.0" prefHeight="77.0" prefWidth="331.0" promptText="Efternamn" styleClass="toolbar-search">
             <font>
                <Font size="36.0" />
             </font>
          </TextField>
-         <Button layoutX="1519.0" layoutY="698.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="181.0" text="Button" />
+         <Button fx:id="confirmButton" layoutX="1519.0" layoutY="698.0" mnemonicParsing="false" onAction="#updateInfoBackend" prefHeight="77.0" prefWidth="181.0" styleClass="invisible-button" text="Button" />
    </children>
    <effect>
       <ColorAdjust />
