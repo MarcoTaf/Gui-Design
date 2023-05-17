@@ -58,4 +58,8 @@
 
 .toolbar-search{
     -fx-background-radius:4em;
+    -fx-border_width:0px;
+    -fx-text-box-border: transparent;
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
 }
