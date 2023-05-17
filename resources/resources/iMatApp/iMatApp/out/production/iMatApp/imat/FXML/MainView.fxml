@@ -13,6 +13,7 @@
                <children>
                   <StackPane fx:id="shopStackPane" prefHeight="150.0" prefWidth="200.0" />
                   <StackPane fx:id="startStackPane" prefHeight="664.0" prefWidth="1251.0" />
+                  <StackPane fx:id="myInfoStackPane" prefHeight="150.0" prefWidth="200.0" />
                </children>
             </AnchorPane>
          </children>

@@ -21,6 +21,8 @@ public class MainViewController implements Initializable {
     @FXML
     public StackPane shopStackPane;
     @FXML
+    public StackPane myInfoStackPane;
+    @FXML
     public AnchorPane toolbarAnchorPane;
     @FXML
     Label pathLabel;
@@ -38,7 +40,7 @@ public class MainViewController implements Initializable {
         startStackPane.getChildren().add(new StartViewController(this));
         shopStackPane.getChildren().add(new ShopController(this));
         toolbarAnchorPane.getChildren().add(new ToolbarController(this));
-
+        myInfoStackPane.getChildren().add(new MyInfoController(this));
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 

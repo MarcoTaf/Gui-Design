@@ -55,3 +55,7 @@
 .invisible-button{
     -fx-background:node;
 }
+
+.toolbar-search{
+    -fx-background-radius:4em;
+}
