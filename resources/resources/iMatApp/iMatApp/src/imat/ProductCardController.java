@@ -6,13 +6,19 @@ import java.io.IOException;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.scene.control.Button;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 
-
-public class ProductCardController extends AnchorPane
+public class ProductCardController extends SubViewController
    {
+       private IMatDataHandler database = IMatDataHandler.getInstance();
+       private MainViewController owner;
        private Product targetProduct;
+       private ShoppingCart shoppingCart = IMatDataHandler.getInstance().getShoppingCart();
+       private int amountToAdd = 0;
        @FXML
        public ImageView productImage;
        @FXML
@@ -31,16 +37,10 @@ public class ProductCardController extends AnchorPane
        public Button productAddToAdd;
        @FXML
        public Button productAddToCart;
-       public ProductCardController(Product targetProduct) {
-           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProductCard.fxml"));
-           fxmlLoader.setRoot(this);
-           fxmlLoader.setController(this);
+       public ProductCardController(Product targetProduct, MainViewController owner) {
+           super("ProductCard.fxml", owner);
+           this.owner = owner;
 
-           try {
-               fxmlLoader.load();
-           } catch (IOException exception) {
-               throw new RuntimeException(exception);
-           }
 
            this.targetProduct = targetProduct;
            loadTargetProduct(this.targetProduct);
@@ -49,6 +49,44 @@ public class ProductCardController extends AnchorPane
        private void loadTargetProduct(Product targetProduct)
        {
            productName.setText(targetProduct.getName());
+           productDesc.setText(targetProduct.getUnit());
+           productPrice.setText(String.valueOf(targetProduct.getPrice()) + " kr");
+           productPriceWithoutDiscount.setText("");
+
+
+           productImage.setImage(database.getFXImage(targetProduct));
+           updateAmountText();
+       }
+
+       public void addToAdd()
+       {
+           amountToAdd++;
+           updateAmountText();
+       }
+
+       public void removeFromAdd()
+       {
+           if (amountToAdd > 0)
+           {
+               amountToAdd--;
+               updateAmountText();
+           }
+       }
+
+       public void addToCart()
+       {
+           if (amountToAdd > 0) {
+               ShoppingItem item = new ShoppingItem(targetProduct, amountToAdd);
+               shoppingCart.addItem(item, true);
+
+               amountToAdd = 0;
+               updateAmountText();
+           }
+       }
+
+       private void updateAmountText()
+       {
+           productAddAmount.setText(String.valueOf(amountToAdd) + " st");
        }
 
 }
