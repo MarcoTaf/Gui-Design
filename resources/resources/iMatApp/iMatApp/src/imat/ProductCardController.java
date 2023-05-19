@@ -37,6 +37,8 @@ public class ProductCardController extends SubViewController
        public Button productAddToAdd;
        @FXML
        public Button productAddToCart;
+       @FXML
+       public AnchorPane anchorPane;
        public ProductCardController(Product targetProduct, MainViewController owner) {
            super("ProductCard.fxml", owner);
            this.owner = owner;
@@ -87,6 +89,12 @@ public class ProductCardController extends SubViewController
        private void updateAmountText()
        {
            productAddAmount.setText(String.valueOf(amountToAdd) + " st");
+       }
+
+       public void showDetailView()
+       {
+            owner.switchView(MainViewController.view.detail, targetProduct);
+
        }
 
 }
