@@ -146,6 +146,15 @@ public class MainViewController implements Initializable {
         }
     }
 
+    public view getCurrentViewType()
+    {
+        if (!(currentView == null))
+        {
+            return currentView.targetView;
+        }
+        throw new RuntimeException("Tried to read CurrentViewType when it was blank.");
+    }
+
     private class CurrentViewInfo{
         public Product targetProduct;
         public view targetView;
