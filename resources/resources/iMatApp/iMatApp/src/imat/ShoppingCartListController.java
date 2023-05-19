@@ -1,17 +1,37 @@
 package imat;
 
+import java.util.List;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.event.Event;
+import javafx.scene.layout.FlowPane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 public class ShoppingCartListController extends SubViewController{
+    private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
     @FXML
     public AnchorPane backgroundAnchorPane;
     @FXML
     public AnchorPane cartAnchorPane;
+    @FXML
+    public FlowPane itemFlowPane;
     public ShoppingCartListController(MainViewController owner)
     {
         super("varukorgdropdown.fxml", owner);
+    }
+
+    public void updateList()
+    {
+        itemFlowPane.getChildren().clear();
+
+        List<ShoppingItem> items = cart.getItems();
+        for (int i = 0; i < items.size(); i++)
+        {
+            ShoppingCartListItemController cartItem = new ShoppingCartListItemController(owner, this, items.get(i));
+            itemFlowPane.getChildren().add(cartItem);
+        }
     }
 
     public void outsideClicked()

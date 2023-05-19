@@ -20,6 +20,7 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 public class MainViewController implements Initializable {
 
     private MyInfoController myInfoController;
+    private ShoppingCartListController cartListController;
 
     private ArrayList<view> previousView = new ArrayList<view>();
     private view currentView = null;
@@ -47,11 +48,12 @@ public class MainViewController implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
         myInfoController = new MyInfoController(this);
+        cartListController = new ShoppingCartListController(this);
 
         startStackPane.getChildren().add(new StartViewController(this));
         shopStackPane.getChildren().add(new ShopController(this));
         toolbarAnchorPane.getChildren().add(new ToolbarController(this));
-        shoppingCartStackPane.getChildren().add(new ShoppingCartListController(this));
+        shoppingCartStackPane.getChildren().add(cartListController);
         myInfoStackPane.getChildren().add(myInfoController);
 
 
@@ -119,6 +121,7 @@ public class MainViewController implements Initializable {
                 myInfoStackPane.toFront();
                 break;
             case cart:
+                cartListController.updateList();
                 shoppingCartStackPane.toFront();
                 break;
             default:
