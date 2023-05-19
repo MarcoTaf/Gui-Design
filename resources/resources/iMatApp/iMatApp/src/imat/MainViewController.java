@@ -30,6 +30,8 @@ public class MainViewController implements Initializable {
     @FXML
     public StackPane myInfoStackPane;
     @FXML
+    public StackPane shoppingCartStackPane;
+    @FXML
     public AnchorPane toolbarAnchorPane;
     @FXML
     Label pathLabel;
@@ -39,7 +41,8 @@ public class MainViewController implements Initializable {
     enum view {
         start,
         shop,
-        profile
+        profile,
+        cart
     }
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -48,6 +51,7 @@ public class MainViewController implements Initializable {
         startStackPane.getChildren().add(new StartViewController(this));
         shopStackPane.getChildren().add(new ShopController(this));
         toolbarAnchorPane.getChildren().add(new ToolbarController(this));
+        shoppingCartStackPane.getChildren().add(new ShoppingCartListController(this));
         myInfoStackPane.getChildren().add(myInfoController);
 
 
@@ -113,6 +117,9 @@ public class MainViewController implements Initializable {
                 break;
             case profile:
                 myInfoStackPane.toFront();
+                break;
+            case cart:
+                shoppingCartStackPane.toFront();
                 break;
             default:
                 break;

@@ -25,7 +25,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="ToolbarCart" layoutX="1764.0" layoutY="74.0" mnemonicParsing="false" styleClass="invisible-button" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="45.0">
+                  <Button fx:id="ToolbarCart" layoutX="1764.0" layoutY="74.0" mnemonicParsing="false" onAction="#cartPressed" styleClass="invisible-button" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="45.0">
                      <graphic>
                         <ImageView fitHeight="62.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>

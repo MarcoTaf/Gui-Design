@@ -34,4 +34,5 @@ public class ToolbarController extends SubViewController {
     {
         owner.returnView();
     }
+    public void cartPressed(){owner.switchView(MainViewController.view.cart);}
 }
