@@ -16,6 +16,7 @@
                   <StackPane fx:id="myInfoStackPane" prefHeight="150.0" prefWidth="200.0" />
                   <StackPane fx:id="shoppingCartStackPane" prefHeight="150.0" prefWidth="200.0" />
                   <StackPane fx:id="detailStackPane" prefHeight="150.0" prefWidth="200.0" />
+                  <StackPane fx:id="myInfoBackoutErrorStackPane" prefHeight="150.0" prefWidth="200.0" />
                </children>
             </AnchorPane>
          </children>

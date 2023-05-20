@@ -41,7 +41,14 @@ public class MyInfoController extends SubViewController {
 
         customer = IMatDataHandler.getInstance().getCustomer();
 
+
         firstNameField.setText(customer.getFirstName());
+        lastNameField.setText(customer.getLastName());
+        mailField.setText(customer.getEmail());
+        telField.setText(customer.getPhoneNumber());
+        addressField.setText(customer.getAddress());
+        postNumField.setText(customer.getPostCode());
+        postOrtField.setText(customer.getPostAddress());
     }
 
     public void fieldChanged()

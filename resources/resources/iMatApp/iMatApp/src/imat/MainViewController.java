@@ -42,6 +42,8 @@ public class MainViewController implements Initializable {
     @FXML
     public StackPane detailStackPane;
     @FXML
+    public StackPane myInfoBackoutErrorStackPane;
+    @FXML
     public AnchorPane toolbarAnchorPane;
     @FXML
     Label pathLabel;
@@ -53,7 +55,8 @@ public class MainViewController implements Initializable {
         shop,
         profile,
         cart,
-        detail
+        detail,
+        myInfoBackoutError
     }
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -69,6 +72,7 @@ public class MainViewController implements Initializable {
         shoppingCartStackPane.getChildren().add(cartListController);
         myInfoStackPane.getChildren().add(myInfoController);
         detailStackPane.getChildren().add(detailViewController);
+        myInfoBackoutErrorStackPane.getChildren().add(new MyInfoLeaveErrorController(this));
 
 
         switchView(view.start);
@@ -89,6 +93,8 @@ public class MainViewController implements Initializable {
             case profile:
                 if(myInfoController.checkFieldsChanged())
                 {
+                    previousView.add(currentView);
+                    executeViewSwitch(new CurrentViewInfo(view.myInfoBackoutError, null, null, null));
                     return false;
                 }
                 break;
@@ -168,6 +174,9 @@ public class MainViewController implements Initializable {
             case detail:
                 detailViewController.setProduct(target.targetProduct);
                 detailStackPane.toFront();
+                break;
+            case myInfoBackoutError:
+                myInfoBackoutErrorStackPane.toFront();
                 break;
             default:
                 break;
