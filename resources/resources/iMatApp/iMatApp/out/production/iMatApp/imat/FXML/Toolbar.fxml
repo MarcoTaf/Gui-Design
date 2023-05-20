@@ -34,7 +34,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                     <TextField layoutX="412.0" layoutY="45.0" prefHeight="53.0" prefWidth="1084.0" styleClass="toolbar-search" />
+                     <TextField fx:id="searchTextField" layoutX="412.0" layoutY="45.0" prefHeight="53.0" prefWidth="1084.0" styleClass="toolbar-search" />
                </children>
             </AnchorPane>
           <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="1928.0" style="-fx-background-color: #FFD4D4;">

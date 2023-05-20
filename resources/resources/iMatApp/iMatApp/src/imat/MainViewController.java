@@ -15,10 +15,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 
 
 public class MainViewController implements Initializable {
 
+    private ShopController shopController;
     private MyInfoController myInfoController;
     private ShoppingCartListController cartListController;
     private DetailViewController detailViewController;
@@ -51,12 +53,13 @@ public class MainViewController implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle rb) {
+        shopController = new ShopController(this);
         myInfoController = new MyInfoController(this);
         cartListController = new ShoppingCartListController(this);
         detailViewController = new DetailViewController(this);
 
         startStackPane.getChildren().add(new StartViewController(this));
-        shopStackPane.getChildren().add(new ShopController(this));
+        shopStackPane.getChildren().add(shopController);
         toolbarAnchorPane.getChildren().add(new ToolbarController(this));
         shoppingCartStackPane.getChildren().add(cartListController);
         myInfoStackPane.getChildren().add(myInfoController);
@@ -91,6 +94,12 @@ public class MainViewController implements Initializable {
         return true;
     }
 
+    public void returnAddOldIntoList()
+    {
+        CurrentViewInfo target = previousView.get(previousView.size()-1);
+        switchView(target.targetView, target.targetProduct);
+    }
+
     public void returnView()
     {
         if (canSwitchView())
@@ -105,16 +114,29 @@ public class MainViewController implements Initializable {
 
     public void switchView(view target)
     {
-        switchView(target, null);
+        switchView(target, null, null);
     }
     public void switchView(view target, Product product) {
+        switchView(target, product, null);
+    }
+
+    public void switchView(view target, String string) {
+        if (string == "")
+        {
+            string = null;
+        }
+
+        switchView(target, null, string);
+    }
+    public void switchView(view target, Product product, String string) {
         if (canSwitchView())
         {
+
             if (!(currentView == null)) {
                 previousView.add(currentView);
             }
 
-            CurrentViewInfo targetView = new CurrentViewInfo(target, product);
+            CurrentViewInfo targetView = new CurrentViewInfo(target, product, string, shopController.getCategory());
             executeViewSwitch(targetView);
         }
 
@@ -128,6 +150,7 @@ public class MainViewController implements Initializable {
                 startStackPane.toFront();
                 break;
             case shop:
+                shopController.updateShopContents(target.targetString, target.targetCategory);
                 shopStackPane.toFront();
                 break;
             case profile:
@@ -158,6 +181,8 @@ public class MainViewController implements Initializable {
     private class CurrentViewInfo{
         public Product targetProduct;
         public view targetView;
+        public String targetString;
+        public ProductCategory targetCategory;
 
         public CurrentViewInfo(view targetView)
         {
@@ -165,10 +190,12 @@ public class MainViewController implements Initializable {
             this.targetProduct = null;
         }
 
-        public CurrentViewInfo(view targetView, Product targetProduct)
+        public CurrentViewInfo(view targetView, Product targetProduct, String targetString, ProductCategory targetCategory)
         {
             this.targetView = targetView;
             this.targetProduct = targetProduct;
+            this.targetString = targetString;
+            this.targetCategory = targetCategory;
         }
 
     }

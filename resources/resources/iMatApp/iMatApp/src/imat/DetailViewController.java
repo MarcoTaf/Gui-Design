@@ -58,7 +58,7 @@ public class DetailViewController extends SubViewController{
 
     public void exitDetailView()
     {
-        owner.returnView();
+        owner.returnAddOldIntoList();
     }
 
     public void mouseTrap(Event event)

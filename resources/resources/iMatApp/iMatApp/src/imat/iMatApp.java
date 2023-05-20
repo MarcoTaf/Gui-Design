@@ -3,10 +3,13 @@ package imat;
 
 import java.util.ResourceBundle;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
+import javafx.event.Event;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 /*
@@ -28,8 +31,11 @@ public class iMatApp extends Application {
         stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);
         stage.setMaximized(true);
+        stage.setOnCloseRequest(new CloseHandler());
         stage.show();
-        System.out.println(IMatDataHandler.getInstance().getProduct(1).toString());
+
+
+
 
     }
 
@@ -38,6 +44,18 @@ public class iMatApp extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+    }
+
+    private class CloseHandler implements EventHandler{
+        public CloseHandler()
+        {
+
+        }
+
+        @Override
+        public void handle(Event event) {
+            IMatDataHandler.getInstance().shutDown();
+        }
     }
     
 }
