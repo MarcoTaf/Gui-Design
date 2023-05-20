@@ -40,12 +40,12 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Label fx:id="prisperstyck" layoutX="174.0" layoutY="68.0" prefHeight="21.0" prefWidth="22.0" text="Pris per styck">
+      <Label fx:id="prisperstyck" layoutX="166.0" layoutY="68.0" prefHeight="25.0" prefWidth="90.0" text="Pris per styck">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="prisperstyckrabatt" layoutX="268.0" layoutY="68.0" prefHeight="17.0" prefWidth="16.0" text="Rabbaterat prisd per styck" textFill="#ed0a0a">
+      <Label fx:id="prisperstyckrabatt" layoutX="268.0" layoutY="68.0" prefHeight="25.0" prefWidth="84.0" text="Rabbaterat prisd per styck" textFill="#ed0a0a">
          <font>
             <Font size="15.0" />
          </font>

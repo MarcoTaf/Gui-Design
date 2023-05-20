@@ -94,7 +94,7 @@ public class MainViewController implements Initializable {
                 if(myInfoController.checkFieldsChanged())
                 {
                     previousView.add(currentView);
-                    executeViewSwitch(new CurrentViewInfo(view.myInfoBackoutError, null, null, null));
+                    executeViewSwitch(new CurrentViewInfo(view.myInfoBackoutError));
                     return false;
                 }
                 break;
@@ -200,15 +200,14 @@ public class MainViewController implements Initializable {
     }
 
     private class CurrentViewInfo{
-        public Product targetProduct;
+        public Product targetProduct = null;
         public view targetView;
-        public String targetString;
-        public ProductCategory targetCategory;
+        public String targetString= null;
+        public ProductCategory targetCategory= null;
 
         public CurrentViewInfo(view targetView)
         {
             this.targetView = targetView;
-            this.targetProduct = null;
         }
 
         public CurrentViewInfo(view targetView, Product targetProduct, String targetString, ProductCategory targetCategory)
