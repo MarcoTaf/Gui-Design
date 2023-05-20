@@ -74,6 +74,10 @@ public class ShopController extends SubViewController {
             Product product = products.get(i);
             if (category == null || category == product.getCategory())
             {
+                if (owner.favoritesEnabled && !(database.isFavorite(product)))
+                {
+                    continue;
+                }
                 addProduct(product);
             }
         }

@@ -6,14 +6,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.ColorAdjust;
+import javafx.scene.effect.Light;
+import javafx.scene.effect.Lighting;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 
 import java.io.IOException;
 
 public class ToolbarController extends SubViewController {
     private MainViewController parent;
+    private Lighting lighting;
     @FXML
     public Button ToolbarHome;
     @FXML
@@ -22,6 +28,10 @@ public class ToolbarController extends SubViewController {
     public Button ToolbarLogo;
     @FXML
     public TextField searchTextField;
+    @FXML
+    public Button ToolbarFavorite;
+    @FXML
+    public ImageView ToolbarFavoriteImage;
 
     public ToolbarController(MainViewController owner)
     {
@@ -38,6 +48,13 @@ public class ToolbarController extends SubViewController {
               }
           }
         });
+
+        lighting = new Lighting(new Light.Distant(45, 90, Color.RED));
+        ColorAdjust bright = new ColorAdjust(0, 1, 1, 1);
+        lighting.setContentInput(bright);
+        lighting.setSurfaceScale(0.0);
+
+        updateFavoritesImage();
     }
 
     public void homePressed() {
@@ -60,6 +77,23 @@ public class ToolbarController extends SubViewController {
         }
         else {
             owner.switchView(MainViewController.view.cart);
+        }
+    }
+
+    public void flipFavoritesEnabled()
+    {
+        owner.flipFavoritesEnabled();
+    }
+
+    public void updateFavoritesImage()
+    {
+        if (owner.favoritesEnabled)
+        {
+            ToolbarFavoriteImage.setEffect(lighting);
+        }
+        else
+        {
+            ToolbarFavoriteImage.setEffect(null);
         }
     }
 }

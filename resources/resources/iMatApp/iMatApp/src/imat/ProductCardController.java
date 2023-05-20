@@ -1,9 +1,13 @@
 package imat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.effect.ColorAdjust;
+import javafx.scene.effect.Light;
+import javafx.scene.effect.Lighting;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.control.Button;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -19,6 +23,8 @@ public class ProductCardController extends SubViewController
        private Product targetProduct;
        private ShoppingCart shoppingCart = IMatDataHandler.getInstance().getShoppingCart();
        private int amountToAdd = 0;
+
+       private Lighting lighting;
        @FXML
        public ImageView productImage;
        @FXML
@@ -39,6 +45,11 @@ public class ProductCardController extends SubViewController
        public Button productAddToCart;
        @FXML
        public AnchorPane anchorPane;
+
+       @FXML
+       public Button favoriteButton;
+       @FXML
+       public ImageView favoriteImage;
        public ProductCardController(Product targetProduct, MainViewController owner) {
            super("ProductCard.fxml", owner);
            this.owner = owner;
@@ -46,6 +57,14 @@ public class ProductCardController extends SubViewController
 
            this.targetProduct = targetProduct;
            loadTargetProduct(this.targetProduct);
+
+           lighting = new Lighting(new Light.Distant(45, 90, Color.RED));
+           ColorAdjust bright = new ColorAdjust(0, 1, 1, 1);
+           lighting.setContentInput(bright);
+           lighting.setSurfaceScale(0.0);
+
+
+           setFavoriteImageLighting();
        }
 
        private void loadTargetProduct(Product targetProduct)
@@ -95,6 +114,32 @@ public class ProductCardController extends SubViewController
        {
             owner.switchView(MainViewController.view.detail, targetProduct);
 
+       }
+
+       public void switchFavorite()
+       {
+            if (database.isFavorite(targetProduct))
+            {
+                database.removeFavorite(targetProduct);
+            }
+            else
+            {
+                database.addFavorite(targetProduct);
+            }
+
+            setFavoriteImageLighting();
+       }
+
+       private void setFavoriteImageLighting()
+       {
+           if (database.isFavorite(targetProduct))
+           {
+               favoriteImage.setEffect(lighting);
+           }
+           else
+           {
+               favoriteImage.setEffect(null);
+           }
        }
 
 }

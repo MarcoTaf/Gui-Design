@@ -17,13 +17,17 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
+import javax.tools.Tool;
+
 
 public class MainViewController implements Initializable {
 
     private ShopController shopController;
     private MyInfoController myInfoController;
+    private ToolbarController toolbarController;
     private ShoppingCartListController cartListController;
     private DetailViewController detailViewController;
+    public boolean favoritesEnabled = false;
 
     private ArrayList<CurrentViewInfo> previousView = new ArrayList<CurrentViewInfo>();
     private CurrentViewInfo currentView = null;
@@ -55,12 +59,13 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         shopController = new ShopController(this);
         myInfoController = new MyInfoController(this);
+        toolbarController = new ToolbarController(this);
         cartListController = new ShoppingCartListController(this);
         detailViewController = new DetailViewController(this);
 
         startStackPane.getChildren().add(new StartViewController(this));
         shopStackPane.getChildren().add(shopController);
-        toolbarAnchorPane.getChildren().add(new ToolbarController(this));
+        toolbarAnchorPane.getChildren().add(toolbarController);
         shoppingCartStackPane.getChildren().add(cartListController);
         myInfoStackPane.getChildren().add(myInfoController);
         detailStackPane.getChildren().add(detailViewController);
@@ -176,6 +181,13 @@ public class MainViewController implements Initializable {
             return currentView.targetView;
         }
         throw new RuntimeException("Tried to read CurrentViewType when it was blank.");
+    }
+
+    public void flipFavoritesEnabled()
+    {
+        favoritesEnabled = (favoritesEnabled == false);
+        toolbarController.updateFavoritesImage();
+        shopController.updateShopContents(currentView.targetString, currentView.targetCategory);
     }
 
     private class CurrentViewInfo{
