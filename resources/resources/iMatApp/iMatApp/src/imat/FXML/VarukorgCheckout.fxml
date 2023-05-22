@@ -3,72 +3,31 @@
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.ColorInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#f5e3e3" height="600.0" layoutY="140.0" stroke="WHITE" strokeType="INSIDE" width="1740.0" />
-      <StackPane prefHeight="885.0" prefWidth="1920.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <StackPane prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <effect>
             <ColorInput paint="WHITE" width="255.0" />
          </effect>
       </StackPane>
-      <Line endX="450.0" layoutX="930.0" layoutY="400.0" rotate="90.0" stroke="#f2aeae" strokeMiterLimit="400.0" strokeWidth="2.0" AnchorPane.bottomAnchor="408.0" AnchorPane.leftAnchor="720.0" />
-      <Label layoutX="466.0" layoutY="418.0" text="Kontaktuppgifter" AnchorPane.bottomAnchor="618.0" AnchorPane.leftAnchor="400.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Label alignment="TOP_CENTER" prefHeight="126.0" prefWidth="450.0" text="Uppgifter" AnchorPane.bottomAnchor="604.0" AnchorPane.leftAnchor="735.0" AnchorPane.rightAnchor="735.0">
+      <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#f5e3e3" height="600.0" layoutX="100.0" layoutY="280.0" stroke="WHITE" strokeType="INSIDE" width="1740.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" />
+      <Label alignment="TOP_CENTER" prefHeight="126.0" prefWidth="450.0" text="Varukorg" AnchorPane.bottomAnchor="604.0" AnchorPane.leftAnchor="735.0" AnchorPane.rightAnchor="735.0">
          <font>
             <Font size="64.0" />
          </font>
       </Label>
-      <TextField fx:id="firstNameField" layoutX="310.0" layoutY="489.0" prefHeight="70.0" prefWidth="200.0" text="Namn" AnchorPane.bottomAnchor="510.0" AnchorPane.leftAnchor="250.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="lastNameField" layoutX="650.0" layoutY="528.0" prefHeight="70.0" prefWidth="350.0" text="Efternamn" AnchorPane.bottomAnchor="510.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="1100.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="postNumField" layoutX="1087.0" layoutY="707.0" prefHeight="70.0" prefWidth="170.0" text="Postnr" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="1100.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="mailField" layoutX="559.0" layoutY="633.0" prefHeight="70.0" prefWidth="600.0" text="Mailadress" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="1100.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="telField" layoutX="370.0" layoutY="799.0" prefHeight="70.0" prefWidth="600.0" text="Telefonnr" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="1100.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="addressField" layoutX="1266.0" layoutY="556.0" prefHeight="70.0" prefWidth="600.0" text="Gatuaddress" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="1100.0" AnchorPane.rightAnchor="220.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="postOrtField" layoutX="1409.0" layoutY="723.0" prefHeight="70.0" prefWidth="350.0" text="Postort" AnchorPane.bottomAnchor="310.0" AnchorPane.rightAnchor="220.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </TextField>
-      <Button mnemonicParsing="false" onAction="#switchViewCart" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="791.0" AnchorPane.leftAnchor="525.0">
+      <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="791.0" AnchorPane.leftAnchor="525.0">
          <graphic>
             <ImageView fx:id="Knapp1Uppgifter" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
                <viewport>
@@ -80,17 +39,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="1296.0" layoutY="418.0" text="Leveransaddress" AnchorPane.bottomAnchor="618.0" AnchorPane.rightAnchor="400.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Button fx:id="NästaKnappUppgifter" mnemonicParsing="false" onAction="#switchViewDelivery" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
+      <Button fx:id="NästaKnappUppgifter" mnemonicParsing="false" onAction="#switchViewInfo" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#switchViewCart" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
+      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>
@@ -166,6 +120,16 @@
       <Label layoutX="516.0" layoutY="468.0" text="Berkräftelse" AnchorPane.bottomAnchor="753.0" AnchorPane.rightAnchor="490.0">
          <font>
             <Font size="30.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="110.0" layoutY="155.0" prefHeight="468.0" prefWidth="1697.0" style="-fx-background-color: #f5e3e3;">
+         <content>
+            <FlowPane fx:id="cartFlowPane" prefHeight="466.0" prefWidth="1695.0" style="-fx-background-color: #f5e3e3;" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="totalCostLabel" layoutX="1430.0" layoutY="692.0" text="Label">
+         <font>
+            <Font size="27.0" />
          </font>
       </Label>
    </children>

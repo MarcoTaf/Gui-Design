@@ -27,6 +27,7 @@ public class MainViewController implements Initializable {
     private ToolbarController toolbarController;
     private ShoppingCartListController cartListController;
     private DetailViewController detailViewController;
+    private CheckoutItemsController checkoutItemsController;
     public boolean favoritesEnabled = false;
 
     private ArrayList<CurrentViewInfo> previousView = new ArrayList<CurrentViewInfo>();
@@ -44,6 +45,14 @@ public class MainViewController implements Initializable {
     @FXML
     public StackPane myInfoBackoutErrorStackPane;
     @FXML
+    public  StackPane checkoutCartStackpane;
+    @FXML
+    public  StackPane checkoutInfoStackpane;
+    @FXML StackPane checkoutDeliveryStackPane;
+    @FXML StackPane checkoutPaymentStackPane;
+    @FXML
+    StackPane checkoutSistaStackPane;
+    @FXML
     public AnchorPane toolbarAnchorPane;
     @FXML
     Label pathLabel;
@@ -56,8 +65,16 @@ public class MainViewController implements Initializable {
         profile,
         cart,
         detail,
-        myInfoBackoutError
+        myInfoBackoutError,
+        checkoutCart,
+        checkoutInfo,
+        checkoutDelivery,
+        checkoutPayment,
+        checkoutConfirm,
+        checkoutFinal
     }
+
+    enum  test {a}
 
     public void initialize(URL url, ResourceBundle rb) {
         shopController = new ShopController(this);
@@ -65,6 +82,7 @@ public class MainViewController implements Initializable {
         toolbarController = new ToolbarController(this);
         cartListController = new ShoppingCartListController(this);
         detailViewController = new DetailViewController(this);
+        checkoutItemsController = new CheckoutItemsController(this);
 
         startStackPane.getChildren().add(new StartViewController(this));
         shopStackPane.getChildren().add(shopController);
@@ -73,6 +91,10 @@ public class MainViewController implements Initializable {
         myInfoStackPane.getChildren().add(myInfoController);
         detailStackPane.getChildren().add(detailViewController);
         myInfoBackoutErrorStackPane.getChildren().add(new MyInfoLeaveErrorController(this));
+        checkoutCartStackpane.getChildren().add(checkoutItemsController);
+        checkoutInfoStackpane.getChildren().add(new CheckoutInfoController(this));
+        checkoutDeliveryStackPane.getChildren().add(new CheckoutDeliveryController(this));
+        checkoutPaymentStackPane.getChildren().add(new CheckoutPaymentController(this));
 
 
         switchView(view.start);
@@ -178,6 +200,19 @@ public class MainViewController implements Initializable {
                 break;
             case myInfoBackoutError:
                 myInfoBackoutErrorStackPane.toFront();
+                break;
+            case checkoutCart:
+                checkoutItemsController.updateView();
+                checkoutCartStackpane.toFront();
+                break;
+            case checkoutInfo:
+                checkoutInfoStackpane.toFront();
+                break;
+            case checkoutDelivery:
+                checkoutDeliveryStackPane.toFront();
+                break;
+            case checkoutPayment:
+                checkoutPaymentStackPane.toFront();
                 break;
             default:
                 break;
