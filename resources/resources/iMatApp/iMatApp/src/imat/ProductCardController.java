@@ -50,6 +50,8 @@ public class ProductCardController extends SubViewController
        public Button favoriteButton;
        @FXML
        public ImageView favoriteImage;
+       @FXML
+       public ImageView isEcoImage;
        public ProductCardController(Product targetProduct, MainViewController owner) {
            super("ProductCard.fxml", owner);
            this.owner = owner;
@@ -62,9 +64,13 @@ public class ProductCardController extends SubViewController
            ColorAdjust bright = new ColorAdjust(0, 1, 1, 1);
            lighting.setContentInput(bright);
            lighting.setSurfaceScale(0.0);
-
-
            setFavoriteImageLighting();
+
+           if (!(targetProduct.isEcological()))
+           {
+               isEcoImage.setVisible(false);
+           }
+
        }
 
        private void loadTargetProduct(Product targetProduct)

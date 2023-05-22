@@ -40,5 +40,10 @@
             </ImageView>
          </graphic>
       </Button>
+      <ImageView fx:id="isEcoImage" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder%20till%20scenebuilder/eco.png" />
+         </image>
+      </ImageView>
    </children>
 </fx:root>
