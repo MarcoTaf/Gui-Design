@@ -13,10 +13,7 @@ import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.PrimitiveIterator;
+import java.util.*;
 import java.util.concurrent.Flow;
 
 public class ShopController extends SubViewController {
@@ -24,6 +21,8 @@ public class ShopController extends SubViewController {
     private IMatDataHandler database = IMatDataHandler.getInstance();
     private HashMap<Product, ProductCardController> productCardDatabase = new HashMap<Product, ProductCardController>();
     private ProductCategory currentCategory = null;
+    private boolean ecoEnabled = false;
+    private sortMode sortingMode = sortMode.none; //I think I am dying bad names oh god
 
     @FXML
     public FlowPane productFlowPane;
@@ -33,7 +32,7 @@ public class ShopController extends SubViewController {
     {
         super("Kategorilista.fxml", owner);
         setupProductCardDB();
-        updateShopContents(null, currentCategory);
+        updateShopContents(null, currentCategory, ecoEnabled, sortingMode);
 
         ProductCategory[] categories = ProductCategory.values();
 
@@ -55,26 +54,59 @@ public class ShopController extends SubViewController {
 
     }
 
-    public void updateShopContents(String searchTemrs, ProductCategory category)
+    public void updateShopContents(String searchTemrs, ProductCategory category, boolean ecoEnabled, sortMode sortingMode)
     {
         productFlowPane.getChildren().clear();
+        this.ecoEnabled = ecoEnabled;
+        this.sortingMode = sortingMode;
 
         List<Product> products;
+        List<Product> productsUnsorted;
         if (searchTemrs == null)
         {
-            products = database.getProducts();
+            /*WTF? The list this spits out is not a copy. It's the actual original list of all the products
+            that the code has access to. This means that if you manipulate or edit this list in any way
+            then that means that all products will be wiped from the code since this is also the list it saves.
+            Why would you ever have a setup like this???
+             */
+            productsUnsorted = new ArrayList<Product>(database.getProducts());
         }
         else
         {
-            products = database.findProducts(searchTemrs);
+            productsUnsorted = new ArrayList<>(database.findProducts(searchTemrs));
         }
 
-        for (var i = 0; i < products.size(); i++)
+        switch (sortingMode)
+        {
+            case top:
+                products = sortList(productsUnsorted);
+                break;
+            case bottom:
+                products = new ArrayList<Product>();//This code was brouht to you by Java, who cannot even make a reverseing method for their god damn lists.
+                List<Product> sortedList = sortList(productsUnsorted);
+                while(sortedList.size() > 0)
+                {
+                    products.add(sortedList.get(sortedList.size() - 1));
+                    sortedList.remove(sortedList.size() - 1);
+                }
+                break;
+            default:
+                products = productsUnsorted; //Dear IDE, I feel like I am losing my sanity with you.
+                break;
+        }
+        System.out.println(String.valueOf(sortingMode));
+
+        for (int i = 0; i < products.size(); i++)
         {
             Product product = products.get(i);
             if (category == null || category == product.getCategory())
             {
                 if (owner.favoritesEnabled && !(database.isFavorite(product)))
+                {
+                    continue;
+                }
+
+                if (ecoEnabled && !(product.isEcological()))
                 {
                     continue;
                 }
@@ -116,5 +148,97 @@ public class ShopController extends SubViewController {
     public ProductCategory getCategory()
     {
         return currentCategory;
+    }
+
+    public void flipEco()
+    {
+        ecoEnabled = (ecoEnabled == false);
+        owner.switchView(MainViewController.view.shop);
+    }
+
+    public void setEco(boolean ecoEnabled)
+    {
+        this.ecoEnabled = ecoEnabled;
+    }
+
+    public boolean getEco()
+    {
+        return ecoEnabled;
+    }
+
+    public void setSortMode(sortMode sortingMode)
+    {
+        this.sortingMode = sortingMode;
+        owner.switchView(MainViewController.view.shop);
+    }
+
+    public sortMode getSortMode()
+    {
+        return this.sortingMode;
+    }
+
+    public void setSortingModeTop()
+    {
+        if (sortingMode == sortMode.top)
+        {
+            setSortMode(sortMode.none);
+        }
+        else
+        {
+            setSortMode(sortMode.top);
+        }
+    }
+
+    public void setSortingModeBottom()
+    {
+        if (sortingMode == sortMode.bottom)
+        {
+            setSortMode(sortMode.none);
+        }
+        else
+        {
+            setSortMode(sortMode.bottom);
+        }
+    }
+
+    public List<Product> sortList(List<Product> products)
+    {
+        ArrayList<Product> productsSorted = new ArrayList<Product>();
+
+        if (products.size() > 0)
+        {
+            productsSorted.add(products.get(0));
+            products.remove(0);
+
+            while(products.size() > 0)
+            {
+                Product currentProduct = products.get(0);
+                products.remove(0);
+
+                boolean foundFlag = false;
+                for (int k = 0; k < productsSorted.size(); k++)
+                {
+                    if (currentProduct.getPrice() < productsSorted.get(k).getPrice())
+                    {
+                        foundFlag = true;
+                        productsSorted.add(k, currentProduct);
+                        break;
+                    }
+                }
+
+                if (!(foundFlag))
+                {
+                    productsSorted.add(currentProduct);
+                }
+            }
+
+        }
+        return productsSorted;
+    }
+
+    enum sortMode{
+        none,
+        top,
+        bottom
     }
 }

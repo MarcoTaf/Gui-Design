@@ -47,7 +47,6 @@ public class ShoppingCartListItemController extends SubViewController{
         amountInCart.setText(String.valueOf((int) targetItem.getAmount()) + " st");
         priceText.setText(String.valueOf(targetItem.getTotal()) + " kr");
         prisperstyck.setText(String.valueOf(targetItem.getProduct().getPrice()) + " " + targetItem.getProduct().getUnit());
-        prisperstyckrabatt.setText("");
     }
 
     public void addToSelf()

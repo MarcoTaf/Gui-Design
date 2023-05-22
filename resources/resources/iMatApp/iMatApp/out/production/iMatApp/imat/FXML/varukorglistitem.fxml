@@ -45,10 +45,5 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="prisperstyckrabatt" layoutX="268.0" layoutY="68.0" prefHeight="25.0" prefWidth="84.0" text="Rabbaterat prisd per styck" textFill="#ed0a0a">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
    </children>
 </fx:root>

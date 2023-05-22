@@ -127,6 +127,7 @@ public class MainViewController implements Initializable {
     {
         switchView(target, null, null);
     }
+
     public void switchView(view target, Product product) {
         switchView(target, product, null);
     }
@@ -147,7 +148,7 @@ public class MainViewController implements Initializable {
                 previousView.add(currentView);
             }
 
-            CurrentViewInfo targetView = new CurrentViewInfo(target, product, string, shopController.getCategory());
+            CurrentViewInfo targetView = new CurrentViewInfo(target, product, string, shopController.getCategory(), shopController.getEco(), shopController.getSortMode());//BRB gonna need to get an ultra wide laptop to handle the amount of god damn arguments here. If I ask for wheels to be put onto it, do you think I can skate on it?
             executeViewSwitch(targetView);
         }
 
@@ -161,7 +162,7 @@ public class MainViewController implements Initializable {
                 startStackPane.toFront();
                 break;
             case shop:
-                shopController.updateShopContents(target.targetString, target.targetCategory);
+                shopController.updateShopContents(target.targetString, target.targetCategory, target.ecoEnabled, target.sortMode);
                 shopStackPane.toFront();
                 break;
             case profile:
@@ -196,7 +197,7 @@ public class MainViewController implements Initializable {
     {
         favoritesEnabled = (favoritesEnabled == false);
         toolbarController.updateFavoritesImage();
-        shopController.updateShopContents(currentView.targetString, currentView.targetCategory);
+        shopController.updateShopContents(currentView.targetString, currentView.targetCategory, currentView.ecoEnabled, currentView.sortMode);
     }
 
     private class CurrentViewInfo{
@@ -204,18 +205,23 @@ public class MainViewController implements Initializable {
         public view targetView;
         public String targetString= null;
         public ProductCategory targetCategory= null;
+        public boolean ecoEnabled = false;
+        public ShopController.sortMode sortMode = ShopController.sortMode.none;
+
 
         public CurrentViewInfo(view targetView)
         {
             this.targetView = targetView;
         }
 
-        public CurrentViewInfo(view targetView, Product targetProduct, String targetString, ProductCategory targetCategory)
+        public CurrentViewInfo(view targetView, Product targetProduct, String targetString, ProductCategory targetCategory, boolean ecoEnabled, ShopController.sortMode sortMode)
         {
             this.targetView = targetView;
             this.targetProduct = targetProduct;
             this.targetString = targetString;
             this.targetCategory = targetCategory;
+            this.ecoEnabled = ecoEnabled;
+            this.sortMode = sortMode;
         }
 
     }
