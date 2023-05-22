@@ -200,6 +200,11 @@ public class MainViewController implements Initializable {
         shopController.updateShopContents(currentView.targetString, currentView.targetCategory, currentView.ecoEnabled, currentView.sortMode);
     }
 
+    public void setStoreEco(boolean ecoEnabled)
+    {
+        shopController.setEco(ecoEnabled);
+    }
+
     private class CurrentViewInfo{
         public Product targetProduct = null;
         public view targetView;

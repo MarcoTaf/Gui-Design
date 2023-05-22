@@ -27,4 +27,10 @@ public class StartViewController extends SubViewController {
     {
         owner.switchView(MainViewController.view.profile);
     }
+
+    public void ecoPressed()
+    {
+        owner.setStoreEco(true);
+        owner.switchView(MainViewController.view.shop);
+    }
 }
