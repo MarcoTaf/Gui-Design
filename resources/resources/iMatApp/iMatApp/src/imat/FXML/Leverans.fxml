@@ -23,7 +23,7 @@
       </Label>
       <Label alignment="TOP_CENTER" prefHeight="126.0" prefWidth="450.0" text="Leverans" AnchorPane.bottomAnchor="604.0" AnchorPane.leftAnchor="735.0" AnchorPane.rightAnchor="735.0">
          <font>
-            <Font size="64.0" />
+            <Font name="System Bold" size="64.0" />
          </font>
       </Label>
       <Button mnemonicParsing="false" onAction="#switchViewCart" prefHeight="50.0" prefWidth="50.0" AnchorPane.bottomAnchor="811.0" AnchorPane.leftAnchor="525.0">
