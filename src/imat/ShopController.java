@@ -24,6 +24,8 @@ public class ShopController extends SubViewController {
     private boolean ecoEnabled = false;
     private sortMode sortingMode = sortMode.none; //I think I am dying bad names oh god
 
+    private HashMap<String, String> categoryNames = new HashMap<String, String>();
+
     @FXML
     public FlowPane productFlowPane;
     @FXML
@@ -35,12 +37,16 @@ public class ShopController extends SubViewController {
         updateShopContents(null, currentCategory, ecoEnabled, sortingMode);
 
         ProductCategory[] categories = ProductCategory.values();
+        String[] buttonNames = {"Ärtor", "Bröd", "Bär", "Citrus Frukt", "Varma drinkar", "Kalla drinker", "Exotiska frukter",
+        "Fisk", "Grönsaker och Frukt", "Salad","Kött", "Mejeri", "Meloner", "Mjöl, Socker och salt", "nötter och frön", "Pasta", "Potatis och ris",
+        "Rot Grönsaker", "Frukt", "Sött", "Herber"};
 
         for (int i = 0; i < categories.length; i++)
         {
             ProductCategory category = categories[i];
             Button categoryButton = new Button();
-            categoryButton.setText(String.valueOf(category));
+
+            categoryButton.setText(buttonNames[i]);
             categoryButton.setPrefWidth(categoryFlowPane.getPrefWidth());
             categoryButton.setPrefHeight(100);
             categoryButton.setOnAction(new EventHandler<ActionEvent>() {

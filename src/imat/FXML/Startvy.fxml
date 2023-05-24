@@ -44,7 +44,7 @@
                   </image>
                </ImageView>
             </graphic></Button>
-      <Text layoutX="435.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorg" AnchorPane.topAnchor="420.8359375">
+      <Text layoutX="476.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Butik" AnchorPane.topAnchor="428.8359375">
          <font>
             <Font size="40.0" />
          </font>
