@@ -15,6 +15,11 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import se.chalmers.cse.dat216.project.CartEvent;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 import java.io.IOException;
 
@@ -33,6 +38,8 @@ public class ToolbarController extends SubViewController {
     public Button ToolbarFavorite;
     @FXML
     public ImageView ToolbarFavoriteImage;
+    @FXML
+    public Text cartPriceText;
 
     public ToolbarController(MainViewController owner)
     {
@@ -56,6 +63,15 @@ public class ToolbarController extends SubViewController {
         lighting.setSurfaceScale(0.0);
 
         updateFavoritesImage();
+
+        ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
+        cartPriceText.setText(String.valueOf(cart.getTotal()) + " Kr");
+        cart.addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                cartPriceText.setText(String.valueOf(cart.getTotal()) + " Kr");
+            }
+        });
     }
 
     public void homePressed() {

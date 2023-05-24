@@ -106,7 +106,7 @@ public class ProductCardController extends SubViewController
                ShoppingItem item = new ShoppingItem(targetProduct, amountToAdd);
                shoppingCart.addItem(item, true);
 
-               amountToAdd = 0;
+               amountToAdd = 1;
                updateAmountText();
            }
        }
