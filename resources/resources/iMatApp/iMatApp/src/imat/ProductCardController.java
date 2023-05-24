@@ -22,7 +22,7 @@ public class ProductCardController extends SubViewController
        private MainViewController owner;
        private Product targetProduct;
        private ShoppingCart shoppingCart = IMatDataHandler.getInstance().getShoppingCart();
-       private int amountToAdd = 0;
+       private int amountToAdd = 1;
 
        private Lighting lighting;
        @FXML
@@ -93,7 +93,7 @@ public class ProductCardController extends SubViewController
 
        public void removeFromAdd()
        {
-           if (amountToAdd > 0)
+           if (amountToAdd > 1)
            {
                amountToAdd--;
                updateAmountText();
@@ -106,7 +106,7 @@ public class ProductCardController extends SubViewController
                ShoppingItem item = new ShoppingItem(targetProduct, amountToAdd);
                shoppingCart.addItem(item, true);
 
-               amountToAdd = 0;
+               amountToAdd = 1;
                updateAmountText();
            }
        }
