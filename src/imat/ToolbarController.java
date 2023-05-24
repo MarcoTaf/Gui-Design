@@ -1,6 +1,7 @@
 package imat;
 
 import com.sun.tools.javac.Main;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -83,6 +84,11 @@ public class ToolbarController extends SubViewController {
     public void flipFavoritesEnabled()
     {
         owner.flipFavoritesEnabled();
+    }
+
+    public void exitApp()
+    {
+        Platform.exit();
     }
 
     public void updateFavoritesImage()

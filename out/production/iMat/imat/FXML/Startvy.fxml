@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root prefHeight="100.0" prefWidth="495.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #F2EEE8;" stylesheets="@../imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="startShoppingButton" layoutX="395.0" layoutY="150.0" mnemonicParsing="false" onAction="#shopPressed" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
+            <graphic>
+            <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../Bilder%20till%20scenebuilder/korgröd.PNG" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+      <Button layoutX="695.0" layoutY="150.0" mnemonicParsing="false" onAction="#previousPurchase" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
+            <graphic>
+               <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../Bilder%20till%20scenebuilder/listaröd.PNG" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+      <Button layoutX="1010.0" layoutY="150.0" mnemonicParsing="false" onAction="#ecoPressed" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
+            <graphic>
+               <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../Bilder%20till%20scenebuilder/rearöd.PNG" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+      <Button fx:id="prrofileShoppingButton" layoutX="1310.0" layoutY="150.0" mnemonicParsing="false" onAction="#profilePressed" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
+            <graphic>
+               <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../Bilder%20till%20scenebuilder/profilröd.PNG" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+      <Text layoutX="435.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorg" AnchorPane.topAnchor="420.8359375">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="1350.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min profil" AnchorPane.topAnchor="430.0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="1055.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ekologist" textAlignment="CENTER" AnchorPane.topAnchor="428.8359375">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="708.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tidigare Köp" AnchorPane.topAnchor="428.8359375">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
+</fx:root>

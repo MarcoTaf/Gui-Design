@@ -27,7 +27,10 @@ public class PreviousPurchaseDetailController extends SubViewController{
 
         for (int i = 0; i < items.size(); i++)
         {
-            cartFlowPane.getChildren().add(new PreviousPurchaseDetailItem(owner, items.get(i)));
+            ShoppingItem item = items.get(i);
+            PreviousPurchaseDetailItem itemCard = new PreviousPurchaseDetailItem(owner, item);
+            itemCard.setPrefWidth(cartFlowPane.getPrefWidth());
+            cartFlowPane.getChildren().add(itemCard);
             totalPrice += items.get(i).getTotal();
         }
 

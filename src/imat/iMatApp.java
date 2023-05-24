@@ -45,6 +45,12 @@ public class iMatApp extends Application {
 
     }
 
+    @Override
+    public void stop(){
+        IMatDataHandler.getInstance().shutDown();
+        // Save file
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -60,6 +66,7 @@ public class iMatApp extends Application {
 
         @Override
         public void handle(Event event) {
+            System.out.println("Here");
             IMatDataHandler.getInstance().shutDown();
         }
     }

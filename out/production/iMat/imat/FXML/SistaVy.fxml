@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #F2EEE8;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="884.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="#191717" layoutX="378.0" layoutY="159.0" strokeWidth="0.0" text="Tack för att du handlar med oss!" textAlignment="CENTER" wrappingWidth="1202.9178009033203">
+               <font>
+                  <Font name="System Bold" size="100.0" />
+               </font>
+            </Text>
+            <Button fx:id="tbxTillStartsida" layoutX="648.0" layoutY="656.0" mnemonicParsing="false" onAction="#toStart" prefHeight="128.0" prefWidth="691.0" text="Tillbaka till startsidan" textAlignment="CENTER" textFill="#ff7e7e">
+               <font>
+                  <Font name="System Bold" size="60.0" />
+               </font>
+            </Button>
+            <Text layoutX="697.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kvittot hittar du i din mail eller under" wrappingWidth="654.8021240234375">
+               <font>
+                  <Font name="System Italic" size="50.0" />
+               </font>
+            </Text>
+            <Button fx:id="minProfilSista" layoutX="951.0" layoutY="484.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="277.0" text="Min profil" textFill="#ff1414">
+               <font>
+                  <Font name="System Italic" size="50.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</fx:root>

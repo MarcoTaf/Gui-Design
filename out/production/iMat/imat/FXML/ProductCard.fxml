@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showDetailView" prefHeight="392.0" prefWidth="426.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="productImage" fitHeight="219.0" fitWidth="422.0" layoutX="2.0" pickOnBounds="true" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="11.0" layoutY="282.0" prefHeight="52.0" prefWidth="403.0" style="-fx-background-color: #F8BDBD;" styleClass="product-add-to-card-background" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
+         <children>
+            <Button fx:id="productRemoveFromAdd" layoutY="6.0" mnemonicParsing="false" onAction="#removeFromAdd" prefHeight="54.0" prefWidth="54.0" styleClass="button-modify-add-to-cart" text="-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Text fx:id="productAddAmount" layoutX="76.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="x st" textAlignment="CENTER" wrappingWidth="32.80340576171875" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="76.0" AnchorPane.topAnchor="14.0" />
+            <Button fx:id="productAddToAdd" layoutX="134.0" layoutY="-1.0" minHeight="54.0" mnemonicParsing="false" onAction="#addToAdd" prefWidth="54.0" styleClass="button-modify-add-to-cart" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="productAddToCart" layoutX="127.0" layoutY="6.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="54.0" prefWidth="156.0" styleClass="button-add-to-cart" text="Lägg i korg" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Text fx:id="productName" layoutX="14.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" AnchorPane.bottomAnchor="151.482421875" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text fx:id="productDesc" fill="#0000008f" layoutX="14.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="14.0" />
+      <Text fx:id="productPriceWithoutDiscount" layoutX="14.0" layoutY="314.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Original Price" AnchorPane.bottomAnchor="73.984375" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Text fx:id="productPrice" layoutX="374.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Price" textAlignment="RIGHT" AnchorPane.bottomAnchor="73.482421875" AnchorPane.rightAnchor="14.76953125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Button fx:id="favoriteButton" layoutX="314.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchFavorite" prefHeight="78.0" prefWidth="85.0" styleClass="invisible-button">
+         <graphic>
+            <ImageView fx:id="favoriteImage" fitHeight="85.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Bilder%20till%20scenebuilder/HjärtaRedigerad.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="isEcoImage" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder%20till%20scenebuilder/eco.png" />
+         </image>
+      </ImageView>
+   </children>
+</fx:root>
