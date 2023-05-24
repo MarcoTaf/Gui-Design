@@ -33,4 +33,9 @@ public class StartViewController extends SubViewController {
         owner.setStoreEco(true);
         owner.switchView(MainViewController.view.shop);
     }
+
+    public void previousPurchase()
+    {
+        owner.switchView(MainViewController.view.previousPurchase);
+    }
 }

@@ -39,4 +39,12 @@ public abstract class CheckoutViewsController extends  SubViewController{
     {
         owner.switchView(MainViewController.view.checkoutPayment);
     }
+    public void switchViewConfirm()
+    {
+        owner.switchView(MainViewController.view.checkoutConfirm);
+    }
+    public void switchViewFinal()
+    {
+        owner.switchView(MainViewController.view.checkoutFinal);
+    }
 }

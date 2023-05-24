@@ -61,10 +61,6 @@ public class DetailViewController extends SubViewController{
         owner.returnAddOldIntoList();
     }
 
-    public void mouseTrap(Event event)
-    {
-        event.consume();
-    }
 
     public void addToAdd()
     {

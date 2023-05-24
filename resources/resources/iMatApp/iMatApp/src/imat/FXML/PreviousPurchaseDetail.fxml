@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.ColorInput?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exitView" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080808;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080808;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <ColorInput paint="WHITE" width="255.0" />
+         </effect>
+      </StackPane>
+      <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#f5e3e3" height="805.0" layoutX="312.0" layoutY="280.0" onMouseClicked="#mouseTrap" stroke="WHITE" strokeType="INSIDE" width="1320.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="40.0" />
+      <ScrollPane layoutX="323.0" layoutY="59.0" prefHeight="705.0" prefWidth="1285.0" style="-fx-background-color: #f5e3e3;">
+         <content>
+            <FlowPane fx:id="cartFlowPane" prefHeight="703.0" prefWidth="1283.0" style="-fx-background-color: #f5e3e3;" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="totalCostLabel" layoutX="1431.0" layoutY="784.0" text="Label">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</fx:root>

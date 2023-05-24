@@ -1,5 +1,6 @@
 package imat;
 
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
@@ -19,5 +20,15 @@ public abstract class SubViewController extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    public void mouseTrap(Event event)
+    {
+        event.consume();
+    }
+
+    public void exitView()
+    {
+        owner.returnView();
     }
 }

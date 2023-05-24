@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
@@ -28,6 +29,10 @@ public class MainViewController implements Initializable {
     private ShoppingCartListController cartListController;
     private DetailViewController detailViewController;
     private CheckoutItemsController checkoutItemsController;
+    private CheckoutConfirmController checkoutConfirmController;
+    private  CheckoutFinalController checkoutFinalController;
+    private PreviousPurchaseViewController previousPurchaseViewController;
+    private  PreviousPurchaseDetailController previousPurchaseDetailController;
     public boolean favoritesEnabled = false;
 
     private ArrayList<CurrentViewInfo> previousView = new ArrayList<CurrentViewInfo>();
@@ -51,7 +56,14 @@ public class MainViewController implements Initializable {
     @FXML StackPane checkoutDeliveryStackPane;
     @FXML StackPane checkoutPaymentStackPane;
     @FXML
-    StackPane checkoutSistaStackPane;
+    public StackPane checkoutConfirmStackpane;
+    @FXML
+    public StackPane checkoutFinalStackpane;
+    @FXML StackPane previousPurchaseStackPane;
+    @FXML
+    public StackPane previousPurchaseDetailStackPane;
+    @FXML
+    public StackPane checkoutSistaStackPane;
     @FXML
     public AnchorPane toolbarAnchorPane;
     @FXML
@@ -71,7 +83,9 @@ public class MainViewController implements Initializable {
         checkoutDelivery,
         checkoutPayment,
         checkoutConfirm,
-        checkoutFinal
+        checkoutFinal,
+        previousPurchase,
+        previousPurchaseDetail
     }
 
     enum  test {a}
@@ -83,6 +97,10 @@ public class MainViewController implements Initializable {
         cartListController = new ShoppingCartListController(this);
         detailViewController = new DetailViewController(this);
         checkoutItemsController = new CheckoutItemsController(this);
+        checkoutConfirmController = new CheckoutConfirmController(this);
+        previousPurchaseViewController = new PreviousPurchaseViewController(this);
+        checkoutFinalController = new CheckoutFinalController(this);
+        previousPurchaseDetailController = new PreviousPurchaseDetailController(this);
 
         startStackPane.getChildren().add(new StartViewController(this));
         shopStackPane.getChildren().add(shopController);
@@ -95,6 +113,10 @@ public class MainViewController implements Initializable {
         checkoutInfoStackpane.getChildren().add(new CheckoutInfoController(this));
         checkoutDeliveryStackPane.getChildren().add(new CheckoutDeliveryController(this));
         checkoutPaymentStackPane.getChildren().add(new CheckoutPaymentController(this));
+        checkoutConfirmStackpane.getChildren().add(checkoutConfirmController);
+        checkoutFinalStackpane.getChildren().add(checkoutFinalController);
+        previousPurchaseStackPane.getChildren().add(previousPurchaseViewController);
+        previousPurchaseDetailStackPane.getChildren().add(previousPurchaseDetailController);
 
 
         switchView(view.start);
@@ -147,11 +169,15 @@ public class MainViewController implements Initializable {
 
     public void switchView(view target)
     {
-        switchView(target, null, null);
+        switchView(target, null, null, null);
+    }
+    public void switchView(view target, Order targetOrder)
+    {
+        switchView(target, null, null, targetOrder);
     }
 
     public void switchView(view target, Product product) {
-        switchView(target, product, null);
+        switchView(target, product, null, null);
     }
 
     public void switchView(view target, String string) {
@@ -160,9 +186,9 @@ public class MainViewController implements Initializable {
             string = null;
         }
 
-        switchView(target, null, string);
+        switchView(target, null, string, null);
     }
-    public void switchView(view target, Product product, String string) {
+    public void switchView(view target, Product product, String string, Order targetOrder) {
         if (canSwitchView())
         {
 
@@ -170,7 +196,7 @@ public class MainViewController implements Initializable {
                 previousView.add(currentView);
             }
 
-            CurrentViewInfo targetView = new CurrentViewInfo(target, product, string, shopController.getCategory(), shopController.getEco(), shopController.getSortMode());//BRB gonna need to get an ultra wide laptop to handle the amount of god damn arguments here. If I ask for wheels to be put onto it, do you think I can skate on it?
+            CurrentViewInfo targetView = new CurrentViewInfo(target, product, string, targetOrder,shopController.getCategory(), shopController.getEco(), shopController.getSortMode());//BRB gonna need to get an ultra wide laptop to handle the amount of god damn arguments here. If I ask for wheels to be put onto it, do you think I can skate on it?
             executeViewSwitch(targetView);
         }
 
@@ -214,6 +240,20 @@ public class MainViewController implements Initializable {
             case checkoutPayment:
                 checkoutPaymentStackPane.toFront();
                 break;
+            case checkoutConfirm:
+                checkoutConfirmStackpane.toFront();
+                break;
+            case checkoutFinal:
+                checkoutFinalStackpane.toFront();
+                break;
+            case previousPurchase:
+                previousPurchaseViewController.updateView();
+                previousPurchaseStackPane.toFront();
+                break;
+            case previousPurchaseDetail:
+                previousPurchaseDetailController.setOrder(target.targetOrder);
+                previousPurchaseDetailStackPane.toFront();
+                break;
             default:
                 break;
         }
@@ -247,6 +287,7 @@ public class MainViewController implements Initializable {
         public ProductCategory targetCategory= null;
         public boolean ecoEnabled = false;
         public ShopController.sortMode sortMode = ShopController.sortMode.none;
+        public Order targetOrder = null;
 
 
         public CurrentViewInfo(view targetView)
@@ -254,7 +295,7 @@ public class MainViewController implements Initializable {
             this.targetView = targetView;
         }
 
-        public CurrentViewInfo(view targetView, Product targetProduct, String targetString, ProductCategory targetCategory, boolean ecoEnabled, ShopController.sortMode sortMode)
+        public CurrentViewInfo(view targetView, Product targetProduct, String targetString, Order targetOrder,ProductCategory targetCategory, boolean ecoEnabled, ShopController.sortMode sortMode)
         {
             this.targetView = targetView;
             this.targetProduct = targetProduct;
@@ -262,6 +303,7 @@ public class MainViewController implements Initializable {
             this.targetCategory = targetCategory;
             this.ecoEnabled = ecoEnabled;
             this.sortMode = sortMode;
+            this.targetOrder = targetOrder;
         }
 
     }

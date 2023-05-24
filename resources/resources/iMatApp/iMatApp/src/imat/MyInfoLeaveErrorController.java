@@ -10,10 +10,6 @@ public class MyInfoLeaveErrorController extends SubViewController {
         super("MyInfoBackoutWarning.fxml", owner);
     }
 
-    public void mouseTrap(Event event)
-    {
-        event.consume();
-    }
 
     public void returnView()
     {

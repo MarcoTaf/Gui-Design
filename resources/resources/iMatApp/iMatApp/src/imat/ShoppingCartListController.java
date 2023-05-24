@@ -47,15 +47,7 @@ public class ShoppingCartListController extends SubViewController{
 
     }
 
-    public void outsideClicked()
-    {
-        owner.returnView();
-    }
 
-    @FXML
-    public void mouseTrap(Event event){
-        event.consume();
-    }
     public void goToCheckout()
     {
         owner.switchView(MainViewController.view.checkoutCart);

@@ -20,7 +20,7 @@
                   </image>
                </ImageView>
             </graphic></Button>
-      <Button layoutX="695.0" layoutY="150.0" mnemonicParsing="false" onAction="#ecoPressed" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
+      <Button layoutX="695.0" layoutY="150.0" mnemonicParsing="false" onAction="#previousPurchase" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
             <graphic>
                <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                   <image>
@@ -28,7 +28,7 @@
                   </image>
                </ImageView>
             </graphic></Button>
-      <Button layoutX="1010.0" layoutY="150.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
+      <Button layoutX="1010.0" layoutY="150.0" mnemonicParsing="false" onAction="#ecoPressed" prefHeight="250.0" prefWidth="250.0" styleClass="start-button">
             <graphic>
                <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                   <image>
@@ -54,12 +54,12 @@
             <Font size="40.0" />
          </font>
       </Text>
-      <Text layoutX="1060.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rabatter" AnchorPane.topAnchor="430.0">
+      <Text layoutX="1104.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eco" textAlignment="CENTER" AnchorPane.topAnchor="428.8359375">
          <font>
             <Font size="40.0" />
          </font>
       </Text>
-      <Text layoutX="710.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eco Varor" AnchorPane.topAnchor="430.0">
+      <Text layoutX="708.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tidigare Köp" AnchorPane.topAnchor="428.8359375">
          <font>
             <Font size="40.0" />
          </font>
