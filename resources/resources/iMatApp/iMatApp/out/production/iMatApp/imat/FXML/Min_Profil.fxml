@@ -65,7 +65,7 @@
                <Font size="36.0" />
             </font>
          </TextField>
-         <Button fx:id="confirmButton" layoutX="1519.0" layoutY="698.0" mnemonicParsing="false" onAction="#updateInfoBackend" prefHeight="77.0" prefWidth="181.0" styleClass="invisible-button" text="Button" />
+         <Button fx:id="confirmButton" layoutX="1519.0" layoutY="698.0" mnemonicParsing="false" onAction="#updateInfoBackend" prefHeight="77.0" prefWidth="181.0" styleClass="invisible-button" text="Spara" />
    </children>
    <effect>
       <ColorAdjust />

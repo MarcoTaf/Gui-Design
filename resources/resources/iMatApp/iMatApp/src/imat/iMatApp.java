@@ -31,7 +31,9 @@ public class iMatApp extends Application {
         stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);
         stage.setMaximized(true);
+        stage.setFullScreen(true);
         stage.setOnCloseRequest(new CloseHandler());
+        stage.setAlwaysOnTop(true);
         stage.show();
 
 

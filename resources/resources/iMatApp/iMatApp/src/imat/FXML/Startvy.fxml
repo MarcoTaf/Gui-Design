@@ -54,7 +54,7 @@
             <Font size="40.0" />
          </font>
       </Text>
-      <Text layoutX="1104.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eco" textAlignment="CENTER" AnchorPane.topAnchor="428.8359375">
+      <Text layoutX="1055.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ekologist" textAlignment="CENTER" AnchorPane.topAnchor="428.8359375">
          <font>
             <Font size="40.0" />
          </font>

@@ -15,7 +15,7 @@
                   <Font name="System Bold" size="100.0" />
                </font>
             </Text>
-            <Button fx:id="tbxTillStartsida" layoutX="648.0" layoutY="656.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="691.0" text="Tillbaka till startsidan" textAlignment="CENTER" textFill="#ff7e7e">
+            <Button fx:id="tbxTillStartsida" layoutX="648.0" layoutY="656.0" mnemonicParsing="false" onAction="#toStart" prefHeight="128.0" prefWidth="691.0" text="Tillbaka till startsidan" textAlignment="CENTER" textFill="#ff7e7e">
                <font>
                   <Font name="System Bold" size="60.0" />
                </font>
