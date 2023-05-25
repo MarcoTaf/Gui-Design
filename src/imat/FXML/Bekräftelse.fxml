@@ -9,6 +9,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
@@ -130,9 +131,9 @@
          </font>
       </Label>
       <ScrollPane fitToWidth="true" hbarPolicy="NEVER" hmax="20.0" hvalue="15.0" layoutX="369.0" layoutY="520.0" prefHeight="280.0" prefViewportHeight="20.0" prefViewportWidth="20.0" prefWidth="600.0" vmax="40.0" vvalue="20.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="230.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="600.0" />
-        </content>
+         <content>
+            <FlowPane fx:id="productFlowpane" prefHeight="278.0" prefWidth="598.0" vgap="10.0" />
+         </content>
       </ScrollPane>
       <Button fx:id="TillbakaKnappLeverans1" layoutX="101.0" layoutY="958.0" mnemonicParsing="false" onAction="#finishPurchase" prefWidth="300.0" text="Bekräfta köp" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="820.0" AnchorPane.rightAnchor="820.0">
          <font>

@@ -247,6 +247,7 @@ public class MainViewController implements Initializable {
                 checkoutPaymentStackPane.toFront();
                 break;
             case checkoutConfirm:
+                checkoutConfirmController.updateList();
                 checkoutConfirmStackpane.toFront();
                 break;
             case checkoutFinal:
