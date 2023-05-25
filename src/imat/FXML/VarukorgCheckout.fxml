@@ -27,9 +27,9 @@
             <Font size="64.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="791.0" AnchorPane.leftAnchor="525.0">
+      <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="525.0">
          <graphic>
-            <ImageView fx:id="Knapp1Uppgifter" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+            <ImageView fx:id="Knapp1Uppgifter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true">
                <viewport>
                   <Rectangle2D height="170.0" minX="188.5" width="170.0" />
                </viewport>
@@ -49,9 +49,9 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="791.0" AnchorPane.rightAnchor="525.0">
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="525.0">
          <graphic>
-            <ImageView fitHeight="70.0" fitWidth="70.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@combinumerals.png" />
                </image>
@@ -61,9 +61,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="791.0" AnchorPane.leftAnchor="725.0">
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="725.0">
          <graphic>
-            <ImageView fx:id="Knapp2Uppgifter" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Knapp2Uppgifter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@combinumerals.png" />
                </image>
@@ -73,9 +73,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="30.0" layoutY="30.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="791.0" AnchorPane.leftAnchor="925.0">
+      <Button layoutX="30.0" layoutY="30.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="925.0">
          <graphic>
-            <ImageView fitHeight="70.0" fitWidth="70.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@combinumerals.png" />
                </image>
@@ -85,9 +85,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="791.0" AnchorPane.rightAnchor="725.0">
+      <Button layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="725.0">
          <graphic>
-            <ImageView fitHeight="70.0" fitWidth="70.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@combinumerals.png" />
                </image>
