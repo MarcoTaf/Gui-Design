@@ -23,12 +23,15 @@ import javax.tools.Tool;
 
 public class MainViewController implements Initializable {
 
+    public double fines = 0;
+
     private ShopController shopController;
     private MyInfoController myInfoController;
     private ToolbarController toolbarController;
     private ShoppingCartListController cartListController;
     private DetailViewController detailViewController;
     private CheckoutItemsController checkoutItemsController;
+    private CheckoutPaymentController checkoutPaymentController;
     private CheckoutConfirmController checkoutConfirmController;
     private  CheckoutFinalController checkoutFinalController;
     private PreviousPurchaseViewController previousPurchaseViewController;
@@ -98,6 +101,7 @@ public class MainViewController implements Initializable {
         detailViewController = new DetailViewController(this);
         checkoutItemsController = new CheckoutItemsController(this);
         checkoutConfirmController = new CheckoutConfirmController(this);
+        checkoutPaymentController = new CheckoutPaymentController(this);
         previousPurchaseViewController = new PreviousPurchaseViewController(this);
         checkoutFinalController = new CheckoutFinalController(this);
         previousPurchaseDetailController = new PreviousPurchaseDetailController(this);
@@ -114,6 +118,7 @@ public class MainViewController implements Initializable {
         checkoutDeliveryStackPane.getChildren().add(new CheckoutDeliveryController(this));
         checkoutPaymentStackPane.getChildren().add(new CheckoutPaymentController(this));
         checkoutConfirmStackpane.getChildren().add(checkoutConfirmController);
+        checkoutPaymentStackPane.getChildren().add(checkoutPaymentController);
         checkoutFinalStackpane.getChildren().add(checkoutFinalController);
         previousPurchaseStackPane.getChildren().add(previousPurchaseViewController);
         previousPurchaseDetailStackPane.getChildren().add(previousPurchaseDetailController);
@@ -238,6 +243,7 @@ public class MainViewController implements Initializable {
                 checkoutDeliveryStackPane.toFront();
                 break;
             case checkoutPayment:
+                checkoutPaymentController.updateLabels();
                 checkoutPaymentStackPane.toFront();
                 break;
             case checkoutConfirm:
@@ -278,6 +284,11 @@ public class MainViewController implements Initializable {
     public void setStoreEco(boolean ecoEnabled)
     {
         shopController.setEco(ecoEnabled);
+    }
+
+    public double getTotalCost()
+    {
+        return MathF.twoDecimans(IMatDataHandler.getInstance().getShoppingCart().getTotal() + fines);
     }
 
     private class CurrentViewInfo{

@@ -47,7 +47,7 @@ public class checkoutCartItem extends SubViewController{
         Produktnamn.setText(product.getName());
         VarukorgDDImage.setImage(database.getFXImage(product));
         amountInCart.setText(String.valueOf((int) targetItem.getAmount()) + " st");
-        priceText.setText(String.valueOf(targetItem.getTotal()) + " kr");
+        priceText.setText(String.valueOf(MathF.twoDecimans(targetItem.getTotal())) + " kr");
 
     }
 

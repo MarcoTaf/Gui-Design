@@ -86,7 +86,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="40.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchViewPayment" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="725.0">
+      <Button layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="725.0">
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -163,11 +163,21 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="MMÅÅ" layoutX="476.0" layoutY="591.0" prefHeight="50.0" prefWidth="200.0" text="MMÅÅ" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="280.0">
+      <TextField fx:id="MM" layoutX="476.0" layoutY="591.0" prefHeight="51.0" prefWidth="98.0" text="MM" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="280.0">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
+      <TextField fx:id="ÅÅ" layoutX="412.0" layoutY="474.0" prefHeight="51.0" prefWidth="98.0" text="ÅÅ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Label layoutX="390.0" layoutY="473.0" prefHeight="54.0" prefWidth="22.0" text="/">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
    </children>
    <effect>
       <ColorAdjust />

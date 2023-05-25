@@ -34,7 +34,7 @@
                   <Rectangle2D height="170.0" minX="188.5" width="170.0" />
                </viewport>
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
             </ImageView>
          </graphic>
@@ -43,7 +43,7 @@
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
                <viewport>
                   <Rectangle2D height="170.0" minX="935.0" width="170.0" />
@@ -53,9 +53,9 @@
       </Button>
       <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="725.0">
          <graphic>
-            <ImageView fx:id="Knapp2Uppgifter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Knapp2Uppgifter" fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
                <viewport>
                   <Rectangle2D height="170.0" minX="375.5" width="170.0" />
@@ -67,7 +67,7 @@
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
                <viewport>
                   <Rectangle2D height="170.0" minX="561.0" width="170.0" />
@@ -79,7 +79,7 @@
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
                <viewport>
                   <Rectangle2D height="170.0" minX="749.5" width="170.0" />
