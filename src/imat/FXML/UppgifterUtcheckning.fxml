@@ -68,7 +68,7 @@
             <Font size="36.0" />
          </font>
       </TextField>
-      <Button mnemonicParsing="false" onAction="#switchViewCart" prefHeight="50.0" prefWidth="50.0" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="525.0">
+      <Button mnemonicParsing="false" onAction="#switchViewCart" prefHeight="50.0" prefWidth="50.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="525.0">
          <graphic>
             <ImageView fx:id="Knapp1Uppgifter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true">
                <viewport>
@@ -85,17 +85,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="NästaKnappUppgifter" mnemonicParsing="false" onAction="#switchViewDelivery" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Button>
-      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#switchViewCart" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Button>
-      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="525.0">
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="525.0">
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -107,7 +97,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="725.0">
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="725.0">
          <graphic>
             <ImageView fx:id="Knapp2Uppgifter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -119,7 +109,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="30.0" layoutY="30.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="925.0">
+      <Button layoutX="30.0" layoutY="30.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="925.0">
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -131,7 +121,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="725.0">
+      <Button layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="725.0">
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -168,6 +158,16 @@
             <Font size="30.0" />
          </font>
       </Label>
+      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#switchViewCart" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="NästaKnappUppgifter" mnemonicParsing="false" onAction="#switchViewDelivery" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
    </children>
    <effect>
       <ColorAdjust />
