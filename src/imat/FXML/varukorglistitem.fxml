@@ -21,7 +21,7 @@
          </children>
       </AnchorPane>
       <ImageView fx:id="VarukorgDDImage" fitHeight="88.0" fitWidth="107.0" layoutX="54.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="VarukorgDDTaBort" layoutX="20.0" layoutY="45.0" mnemonicParsing="false" onAction="#removeSelf" prefHeight="24.0" prefWidth="19.0" styleClass="invisible-button" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0">
+      <Button fx:id="VarukorgDDTaBort" layoutX="20.0" layoutY="45.0" mnemonicParsing="false" onAction="#removeSelf" prefHeight="24.0" prefWidth="19.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0">
          <graphic>
             <ImageView fx:id="VarukorgDDIstäng" fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                <image>

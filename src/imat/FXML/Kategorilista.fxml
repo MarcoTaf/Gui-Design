@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root prefHeight="100.0" prefWidth="495.0" stylesheets="@../imat_app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="100.0" prefWidth="495.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #F2EEE8;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
          <ScrollPane layoutX="1.0" layoutY="72.0" prefHeight="813.0" prefWidth="370.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="72.0">
@@ -18,9 +18,9 @@
          </ScrollPane>
       <StackPane prefHeight="72.0" prefWidth="370.0" style="-fx-background-color: #FFE5E5;" AnchorPane.leftAnchor="0.0">
          <children>
-            <Text fill="#e03737" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier" wrappingWidth="193.43128967285156" StackPane.alignment="CENTER_LEFT">
+            <Text fill="#e03737" strokeType="OUTSIDE" strokeWidth="0.0" text="  Kategorier" wrappingWidth="227.36843872070312" StackPane.alignment="CENTER_LEFT">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
                </font>
             </Text>
          </children>
@@ -32,9 +32,18 @@
          </ScrollPane>
          <AnchorPane prefHeight="72.0" prefWidth="1548.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-               <Button fx:id="ecoEnabledButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#flipEco" prefHeight="55.0" prefWidth="118.0" text="Eco" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
-               <Button layoutX="145.0" layoutY="9.0" mnemonicParsing="false" onAction="#setSortingModeTop" prefHeight="55.0" prefWidth="118.0" text="SortTop" />
-               <Button layoutX="280.0" layoutY="9.0" mnemonicParsing="false" onAction="#setSortingModeBottom" prefHeight="55.0" prefWidth="118.0" text="SortBottom" />
+               <Button fx:id="ecoEnabledButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#flipEco" prefHeight="55.0" prefWidth="150.0" text="Ekologiskt" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="20.0" />
+                  </font></Button>
+               <Button layoutX="145.0" layoutY="9.0" mnemonicParsing="false" onAction="#setSortingModeTop" prefHeight="55.0" prefWidth="210.0" text="Pris lägst till högst" AnchorPane.leftAnchor="175.0">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="20.0" />
+                  </font></Button>
+               <Button layoutX="280.0" layoutY="9.0" mnemonicParsing="false" onAction="#setSortingModeBottom" prefHeight="55.0" prefWidth="210.0" text="Pris högst till lägst" AnchorPane.leftAnchor="400.0">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="20.0" />
+                  </font></Button>
             </children>
          </AnchorPane>
    </children>
