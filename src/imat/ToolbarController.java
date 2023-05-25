@@ -65,11 +65,12 @@ public class ToolbarController extends SubViewController {
         updateFavoritesImage();
 
         ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
-        cartPriceText.setText(String.valueOf(cart.getTotal()) + " Kr");
+
+        cartPriceText.setText(String.valueOf(MathF.twoDecimans(cart.getTotal())) + " Kr");
         cart.addShoppingCartListener(new ShoppingCartListener() {
             @Override
             public void shoppingCartChanged(CartEvent cartEvent) {
-                cartPriceText.setText(String.valueOf(cart.getTotal()) + " Kr");
+                cartPriceText.setText(String.valueOf(MathF.twoDecimans(cart.getTotal())) + " Kr");
             }
         });
     }

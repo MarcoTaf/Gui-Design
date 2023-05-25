@@ -26,14 +26,14 @@
             <Font name="System Bold" size="64.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" onAction="#switchViewCart" prefHeight="50.0" prefWidth="50.0" AnchorPane.bottomAnchor="811.0" AnchorPane.leftAnchor="525.0">
+      <Button mnemonicParsing="false" onAction="#switchViewCart" prefHeight="50.0" prefWidth="50.0" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="525.0">
          <graphic>
             <ImageView fx:id="Knapp1Leverans" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true">
                <viewport>
                   <Rectangle2D height="172.0" minX="186.0" width="172.0" />
                </viewport>
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
             </ImageView>
          </graphic>
@@ -57,7 +57,7 @@
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
                <viewport>
                   <Rectangle2D height="172.0" minX="934.0" width="172.0" />
@@ -65,11 +65,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" AnchorPane.bottomAnchor="811.0" AnchorPane.leftAnchor="725.0">
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="725.0">
          <graphic>
             <ImageView fx:id="Knapp2Leverans" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
                <viewport>
                   <Rectangle2D height="172.0" minX="373.0" width="172.0" />
@@ -81,7 +81,7 @@
          <graphic>
             <ImageView fx:id="Knapp3Leverans" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
                <viewport>
                   <Rectangle2D height="172.0" minX="560.5" width="172.0" />
@@ -93,7 +93,7 @@
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@combinumerals.png" />
+                  <Image url="@../Bilder%20till%20scenebuilder/combinumerals.png" />
                </image>
                <viewport>
                   <Rectangle2D height="172.0" minX="747.0" width="172.0" />

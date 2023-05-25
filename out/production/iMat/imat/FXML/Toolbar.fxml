@@ -28,13 +28,13 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="ToolbarCart" layoutX="1764.0" layoutY="74.0" mnemonicParsing="false" onAction="#cartPressed" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: #FF0000;" styleClass="invisible-button" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="45.0">
+                  <Button fx:id="ToolbarCart" layoutX="1764.0" layoutY="74.0" maxHeight="54.0" mnemonicParsing="false" onAction="#cartPressed" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: #FF0000;" styleClass="invisible-button" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="45.0">
                         <graphic>
                            <HBox prefHeight="100.0" prefWidth="200.0">
                               <children>
                                  <Text fx:id="cartPriceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="157.13671875">
                                     <font>
-                                       <Font size="40.0" />
+                                       <Font size="36.0" />
                                     </font>
                                  </Text>
                               <ImageView fitHeight="54.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
