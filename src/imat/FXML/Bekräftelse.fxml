@@ -135,7 +135,7 @@
             <FlowPane fx:id="productFlowpane" prefHeight="278.0" prefWidth="598.0" vgap="10.0" />
          </content>
       </ScrollPane>
-      <Button fx:id="TillbakaKnappLeverans1" layoutX="101.0" layoutY="958.0" mnemonicParsing="false" onAction="#finishPurchase" prefWidth="300.0" text="Bekräfta köp" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="820.0" AnchorPane.rightAnchor="820.0">
+      <Button fx:id="TillbakaKnappLeverans1" layoutX="101.0" layoutY="958.0" mnemonicParsing="false" onAction="#finishPurchase" prefWidth="300.0" styleClass="button-modify-add-to-cart" text="Bekräfta köp" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="820.0" AnchorPane.rightAnchor="820.0">
          <font>
             <Font size="40.0" />
          </font>
@@ -197,7 +197,7 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Button fx:id="TillbakaKnappLeverans" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#switchViewPayment" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
+      <Button fx:id="TillbakaKnappLeverans" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#switchViewPayment" styleClass="button-modify-add-to-cart" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>

@@ -8,9 +8,20 @@ import java.io.IOException;
 
 public abstract class SubViewController extends AnchorPane {
     protected MainViewController owner;
+
     public SubViewController(String path, MainViewController owner)
     {
         this.owner = owner;
+        setup(path);
+    }
+
+    public SubViewController(String path)
+    {
+        setup(path);
+    }
+
+    private void setup(String path)
+    {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/" + path));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);

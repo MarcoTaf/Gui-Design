@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.TextAlignment;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
@@ -44,11 +45,13 @@ public class ShopController extends SubViewController {
         for (int i = 0; i < categories.length; i++)
         {
             ProductCategory category = categories[i];
-            Button categoryButton = new Button();
+            Button categoryButton = new OverrideButtonController();
 
             categoryButton.setText(buttonNames[i]);
             categoryButton.setPrefWidth(categoryFlowPane.getPrefWidth());
             categoryButton.setPrefHeight(100);
+
+
             categoryButton.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {

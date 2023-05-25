@@ -31,14 +31,12 @@ public class iMatApp extends Application {
         stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);
         stage.setMaximized(true);
+        stage.setFullScreenExitHint("");
         stage.setFullScreen(true);
         stage.setOnCloseRequest(new CloseHandler());
         stage.setAlwaysOnTop(true);
         stage.show();
 
-
-
-        System.out.println();
 
 
 
