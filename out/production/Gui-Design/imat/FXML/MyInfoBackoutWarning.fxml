@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#returnView" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080808;" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="122.0" layoutY="48.0" onMouseClicked="#mouseTrap" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Text layoutX="184.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Användar Info har ändrats. Spara info först" textAlignment="CENTER" wrappingWidth="666.13671875" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0" />
+            <Button layoutX="434.0" layoutY="631.0" mnemonicParsing="false" onAction="#returnView" text="OK" />
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.ColorInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <ColorInput paint="WHITE" width="255.0" />
+         </effect>
+      </StackPane>
+      <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#f5e3e3" height="600.0" layoutX="100.0" layoutY="280.0" stroke="WHITE" strokeType="INSIDE" width="1740.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" />
+      <Label alignment="TOP_CENTER" prefHeight="126.0" prefWidth="450.0" text="Varukorg" AnchorPane.bottomAnchor="604.0" AnchorPane.leftAnchor="735.0" AnchorPane.rightAnchor="735.0">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="525.0">
+         <graphic>
+            <ImageView fx:id="Knapp1Uppgifter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true">
+               <viewport>
+                  <Rectangle2D height="170.0" minX="188.5" width="170.0" />
+               </viewport>
+               <image>
+                  <Image url="@combinumerals.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="525.0">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@combinumerals.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="170.0" minX="935.0" width="170.0" />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="725.0">
+         <graphic>
+            <ImageView fx:id="Knapp2Uppgifter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@combinumerals.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="170.0" minX="375.5" width="170.0" />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="30.0" layoutY="30.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="925.0">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@combinumerals.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="170.0" minX="561.0" width="170.0" />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="725.0">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@combinumerals.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D height="170.0" minX="749.5" width="170.0" />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="476.0" layoutY="428.0" text="Varukorg" AnchorPane.bottomAnchor="753.0" AnchorPane.leftAnchor="510.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="438.0" text="Uppgifter" AnchorPane.bottomAnchor="753.0" AnchorPane.leftAnchor="710.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="448.0" text="Leverans" AnchorPane.bottomAnchor="753.0" AnchorPane.leftAnchor="910.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="506.0" layoutY="458.0" text="Betalning" AnchorPane.bottomAnchor="753.0" AnchorPane.rightAnchor="710.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="516.0" layoutY="468.0" text="Berkräftelse" AnchorPane.bottomAnchor="753.0" AnchorPane.rightAnchor="490.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="110.0" layoutY="155.0" prefHeight="468.0" prefWidth="1697.0" style="-fx-background-color: #f5e3e3;">
+         <content>
+            <FlowPane fx:id="cartFlowPane" prefHeight="466.0" prefWidth="1695.0" style="-fx-background-color: #f5e3e3;" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="totalCostLabel" layoutX="1430.0" layoutY="692.0" text="Label">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="NästaKnappUppgifter" mnemonicParsing="false" onAction="#switchViewInfo" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</fx:root>
