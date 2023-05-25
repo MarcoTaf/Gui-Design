@@ -15,21 +15,16 @@
                   <Font name="System Bold" size="100.0" />
                </font>
             </Text>
-            <Button fx:id="tbxTillStartsida" layoutX="648.0" layoutY="656.0" mnemonicParsing="false" onAction="#toStart" prefHeight="128.0" prefWidth="691.0" text="Tillbaka till startsidan" textAlignment="CENTER" textFill="#ff7e7e">
+            <Button fx:id="tbxTillStartsida" layoutX="648.0" layoutY="656.0" mnemonicParsing="false" onAction="#toStart" prefHeight="128.0" prefWidth="691.0" styleClass="invisible-button" text="Tillbaka till startsidan" textAlignment="CENTER" textFill="#ff7e7e">
                <font>
-                  <Font name="System Bold" size="60.0" />
+                  <Font name="System Bold" size="50.0" />
                </font>
             </Button>
-            <Text layoutX="697.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kvittot hittar du i din mail eller under" wrappingWidth="654.8021240234375">
+            <Text layoutX="676.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kvittot kommer på din mail" wrappingWidth="654.8021240234375">
                <font>
                   <Font name="System Italic" size="50.0" />
                </font>
             </Text>
-            <Button fx:id="minProfilSista" layoutX="951.0" layoutY="484.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="277.0" text="Min profil" textFill="#ff1414">
-               <font>
-                  <Font name="System Italic" size="50.0" />
-               </font>
-            </Button>
          </children>
          <effect>
             <DropShadow />
