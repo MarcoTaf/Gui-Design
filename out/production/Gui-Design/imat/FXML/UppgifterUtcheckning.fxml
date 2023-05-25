@@ -97,7 +97,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="725.0">
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchViewInfo" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.leftAnchor="725.0">
          <graphic>
             <ImageView fx:id="Knapp2Uppgifter" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>

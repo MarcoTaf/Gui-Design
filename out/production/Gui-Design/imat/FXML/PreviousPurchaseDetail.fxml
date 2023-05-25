@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exitView" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080808;" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exitView" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080808;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080808;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <effect>
