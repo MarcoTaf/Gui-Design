@@ -21,6 +21,10 @@ public class CheckoutPaymentController extends CheckoutViewsController{
 
     public void updateLabels()
     {
+        KortnummerBetalning.setText(card.getCardNumber());
+        MM.setText(String.valueOf(card.getValidMonth()));
+        ÅÅ.setText(String.valueOf(card.getValidYear()));
+        CVCBetalning.setText(String.valueOf(card.getVerificationCode()));
         SummaVarorPris.setText(String.valueOf(String.valueOf(IMatDataHandler.getInstance().getShoppingCart().getTotal())) + " kr");
         AvgiftPris.setText(String.valueOf(MathF.twoDecimans(owner.fines)) + " kr");
         TotalsummaPris.setText(String.valueOf(owner.getTotalCost()) + " kr");

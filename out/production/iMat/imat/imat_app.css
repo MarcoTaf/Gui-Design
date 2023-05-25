@@ -49,11 +49,15 @@
     -fx-border-radius:4em;
     -fx-background:none;
     -fx-border-color: #79747E;
+    -fx-background-color: #E7E6E8;
     -fx-border-width:5px;
 }
 
 .invisible-button{
     -fx-background:node;
+}
+.start-button:hover {
+    -fx-background-color:#dae7f3;
 }
 
 .toolbar-search{

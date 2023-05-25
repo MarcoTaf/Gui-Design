@@ -123,12 +123,12 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="KortnummerBetalning" layoutX="413.0" layoutY="528.0" prefHeight="50.0" prefWidth="500.0" text="Kortnummer" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="280.0">
+      <TextField fx:id="KortnummerBetalning" layoutX="413.0" layoutY="528.0" onAction="#numChanged" prefHeight="50.0" prefWidth="500.0" promptText="Kortnummer" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="280.0">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="CVCBetalning" layoutX="466.0" layoutY="581.0" prefHeight="50.0" prefWidth="200.0" text="CVC" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="580.0">
+      <TextField fx:id="CVCBetalning" layoutX="466.0" layoutY="581.0" onAction="#cvvChanged" prefHeight="50.0" prefWidth="200.0" promptText="CVC" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="580.0">
          <font>
             <Font size="24.0" />
          </font>
@@ -163,12 +163,12 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="MM" layoutX="476.0" layoutY="591.0" prefHeight="51.0" prefWidth="98.0" text="MM" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="280.0">
+      <TextField fx:id="MM" layoutX="476.0" layoutY="591.0" onAction="#monthChanged" prefHeight="51.0" prefWidth="98.0" promptText="MM" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="280.0">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="ÅÅ" layoutX="412.0" layoutY="474.0" prefHeight="51.0" prefWidth="98.0" text="ÅÅ">
+      <TextField fx:id="ÅÅ" layoutX="412.0" layoutY="474.0" onAction="#yearChanged" prefHeight="51.0" prefWidth="98.0" promptText="ÅÅ">
          <font>
             <Font size="24.0" />
          </font>
@@ -176,6 +176,11 @@
       <Label layoutX="390.0" layoutY="473.0" prefHeight="54.0" prefWidth="22.0" text="/">
          <font>
             <Font size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="408.0" layoutY="281.0" prefHeight="81.0" prefWidth="378.0" text="Kortinformation för betalning">
+         <font>
+            <Font size="17.0" />
          </font>
       </Label>
    </children>
