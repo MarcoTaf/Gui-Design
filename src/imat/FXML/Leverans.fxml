@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#f5e3e3" height="600.0" layoutX="100.0" layoutY="280.0" stroke="WHITE" strokeType="INSIDE" width="1740.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" />
       <Line endX="450.0" layoutX="930.0" layoutY="400.0" rotate="90.0" stroke="#f2aeae" strokeMiterLimit="400.0" strokeWidth="2.0" AnchorPane.bottomAnchor="408.0" AnchorPane.leftAnchor="720.0" />
