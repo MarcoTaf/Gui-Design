@@ -36,7 +36,10 @@
              -fx-font-size: 20px;
      -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
-
+.text-40px-normal{
+    -fx-font-size: 40px;
+    -fx-font-family: "Arial Rounded MT Bold", sans-serif;
+}
  .text-right{
              -fx-font-size: 16px;
                -fx-text-align:CENTER-RIGHT;
