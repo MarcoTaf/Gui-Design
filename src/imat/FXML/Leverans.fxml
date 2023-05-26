@@ -147,7 +147,7 @@
       <Spinner fx:id="timeSpinner" layoutX="683.0" layoutY="489.0" prefHeight="100.0" prefWidth="220.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="600.0" />
       <Text fx:id="dateText" layoutX="991.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Valt datum" wrappingWidth="163.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="1100.0" />
       <Text fx:id="timeText" layoutX="991.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Vald tid" wrappingWidth="153.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="1500.0" />
-      <Text fx:id="addedPrice" layoutX="991.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Valt leveranssätt" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="1280.0" />
+      <Text fx:id="addedPrice" layoutX="991.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Valt leveranssätt" textAlignment="CENTER" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="1250.0" />
       <Label fx:id="radioError" layoutX="429.0" layoutY="244.0" styleClass="text-20px-normal" text="Välj en" textAlignment="RIGHT" textFill="RED" AnchorPane.leftAnchor="500.0" />
       <Label fx:id="dateError" layoutX="539.0" layoutY="383.0" styleClass="text-20px-normal" text="Välj ett datum" textAlignment="RIGHT" textFill="RED" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="305.0" />
    </children>
