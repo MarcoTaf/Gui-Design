@@ -1,6 +1,7 @@
 package imat;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.beans.value.ObservableValue;
@@ -28,6 +29,8 @@ public class CheckoutInfoController extends CheckoutViewsController {
     @FXML
     public Button confirmButton;
 
+    public Label nameError;
+
     public CheckoutInfoController(MainViewController owner)
     {
         super("UppgifterUtcheckning.fxml", owner);
@@ -49,6 +52,7 @@ public class CheckoutInfoController extends CheckoutViewsController {
         addressField.setText(customer.getAddress());
         postNumField.setText(customer.getPostCode());
         postOrtField.setText(customer.getPostAddress());
+        nameError.setText("");
     }
 
     public void fieldChanged()
@@ -97,5 +101,50 @@ public class CheckoutInfoController extends CheckoutViewsController {
     private void createTextfieldListener(TextField target)
     {
         target.focusedProperty().addListener(new TextFieldListener(target, this));
+    }
+
+    public void canNext()
+    {
+        if (customer.getFirstName() == "")
+        {
+            nameError.setText("All fields must be filled");
+            return;
+        }
+        if (customer.getLastName() == "")
+        {
+            nameError.setText("All fields must be filled");
+            return;
+        }
+        if (customer.getAddress() == "")
+        {
+            nameError.setText("All fields must be filled");
+            return;
+        }
+        if (customer.getPhoneNumber() == "")
+        {
+            nameError.setText("All fields must be filled");
+            return;
+        }
+        if (customer.getEmail() == "")
+        {
+            nameError.setText("All fields must be filled");
+            return;
+        }
+        if (customer.getPostCode() == "")
+        {
+            nameError.setText("All fields must be filled");
+            return;
+        }
+        if (customer.getPostAddress() == "")
+        {
+            nameError.setText("All fields must be filled");
+            return;
+        }
+
+        nameError.setText("");
+
+
+        switchViewDelivery();
+
     }
 }
