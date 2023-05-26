@@ -34,7 +34,6 @@ public class MyInfoController extends SubViewController {
         firstNameField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                customer.setFirstName(t1);
                 fieldChanged();
             }
         });
@@ -42,42 +41,36 @@ public class MyInfoController extends SubViewController {
         lastNameField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                customer.setLastName(t1);
                 fieldChanged();
             }
         });
         mailField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                customer.setEmail(t1);
                 fieldChanged();
             }
         });
         telField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                customer.setPhoneNumber(t1);
                 fieldChanged();
             }
         });
         addressField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                customer.setAddress(t1);
                 fieldChanged();
             }
         });
         postNumField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                customer.setPostCode(t1);
                 fieldChanged();
             }
         });
         postOrtField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                customer.setPostAddress(t1);
                 fieldChanged();
             }
         });
