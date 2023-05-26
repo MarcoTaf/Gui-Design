@@ -40,7 +40,9 @@
      -fx-text-fill: #ffffff;
 }
 .button-modify-add-to-cart{
-    -fx-background-radius: 5em;
+     -fx-background-radius: 5em;
+     /*-fx-max-height: 50px;
+    -fx-min-height: 50px;*/
      -fx-border: 0;
      -fx-background:none;
 
@@ -52,6 +54,9 @@
 }
 
 .button-modify-add-to-cart:hover{
+    /*-fx-max-height: 50px;
+    -fx-min-height: 50px;*/
+
     -fx-background-radius: 5em;
      -fx-border: 0;
      -fx-background:none;
