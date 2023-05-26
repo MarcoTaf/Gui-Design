@@ -113,6 +113,7 @@
     -fx-background:none;
     -fx-focus-background:none;
     -fx-focus-color: #FFFFFF00;
+    -fx-background-color: #00000000;
 }
 
 .invisible-button:pressed{
