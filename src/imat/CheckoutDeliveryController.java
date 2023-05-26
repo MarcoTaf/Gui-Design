@@ -18,6 +18,9 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
     public Spinner<Integer> timeSpinner;
     public DatePicker datePicker;
 
+    public Label radioError;
+    public Label dateError;
+
     public CheckoutDeliveryController(MainViewController owner)
     {
         super("Leverans.fxml", owner);
@@ -25,6 +28,23 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
 
         radioDelivery.setToggleGroup(deliveryPicker);
         radioStore.setToggleGroup(deliveryPicker);
+
+        radioDelivery.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                if (t1)
+                {
+                    CheckoutInfo.getInstance().setDelivery(true);
+                }
+            }
+        });
+
+        radioStore.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                CheckoutInfo.getInstance().setDelivery(true);
+            }
+        });
 
         timeText.setText("Tid: 9:00");
         dateText.setText("Datum: ");
@@ -83,6 +103,36 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
         else
         {
             throw new RuntimeException();
+        }
+    }
+
+    public void canNext()
+    {
+        boolean canGoNext = true;
+
+        if (!(radioStore.isSelected()) && !(radioDelivery.isSelected()))
+        {
+            radioError.setText("You need to choose how to recieve the wares");
+            canGoNext = false;
+        }
+        else
+        {
+            radioError.setText("");
+        }
+
+        if (datePicker.getEditor().getText() == "")
+        {
+            dateError.setText("Please choose a date");
+            canGoNext = false;
+        }
+        else
+        {
+            dateError.setText("");
+        }
+
+        if (canGoNext)
+        {
+            switchViewPayment();
         }
     }
 }
