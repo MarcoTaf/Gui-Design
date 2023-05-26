@@ -13,7 +13,7 @@
       <AnchorPane layoutX="11.0" layoutY="282.0" prefHeight="52.0" prefWidth="403.0" style="-fx-background-color: #F8BDBD;" styleClass="product-add-to-card-background" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
          <children>
             <Button fx:id="productRemoveFromAdd" layoutY="6.0" mnemonicParsing="false" onAction="#removeFromAdd" prefHeight="54.0" prefWidth="54.0" styleClass="button-modify-add-to-cart" text="-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Text fx:id="productAddAmount" layoutX="76.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="x st" textAlignment="CENTER" wrappingWidth="32.80340576171875" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="76.0" AnchorPane.topAnchor="14.0" />
+            <Text fx:id="productAddAmount" layoutX="56.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="x st" textAlignment="CENTER" wrappingWidth="74.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="14.0" />
             <Button fx:id="productAddToAdd" layoutX="134.0" layoutY="-1.0" minHeight="54.0" mnemonicParsing="false" onAction="#addToAdd" prefWidth="54.0" styleClass="button-modify-add-to-cart" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="0.0" />
             <Button fx:id="productAddToCart" layoutX="127.0" layoutY="6.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="54.0" prefWidth="156.0" styleClass="button-add-to-cart" text="Lägg i korg" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
