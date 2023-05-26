@@ -83,11 +83,15 @@
 
 .invisible-button{
     -fx-background:none;
+    -fx-focus-background:none;
+    -fx-focus-color: #FFFFFF00;
 }
 
 .invisible-button:pressed{
     -fx-background-color:#04040490;
 }
+
+
 
 .invisible-button:hover{
     -fx-background:none;

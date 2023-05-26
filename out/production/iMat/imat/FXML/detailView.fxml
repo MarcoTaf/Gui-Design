@@ -25,6 +25,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
+            <Button layoutX="1250.0" layoutY="18.0" mnemonicParsing="false" onAction="#exitDetailView" prefHeight="54.0" prefWidth="54.0" styleClass="invisible-button" text="X" />
          </children>
       </AnchorPane>
    </children>

@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1600.0" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="Produktnamn" layoutX="355.0" layoutY="22.0" prefHeight="58.0" prefWidth="450.0" text="Varunamn">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <Button fx:id="VarukorgDDTaBort" layoutX="8.0" layoutY="40.0" mnemonicParsing="false" onAction="#removeSelf" prefHeight="24.0" prefWidth="19.0">
+      <Button fx:id="VarukorgDDTaBort" layoutX="8.0" layoutY="37.0" mnemonicParsing="false" onAction="#removeSelf" prefHeight="29.0" prefWidth="33.0" styleClass="button-modify-add-to-cart">
          <graphic>
             <ImageView fx:id="VarukorgDDIstäng" fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
