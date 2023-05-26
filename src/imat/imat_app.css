@@ -9,27 +9,32 @@
 
  .text-16px-normal{
              -fx-font-size: 16px;
-
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-25px-normal{
              -fx-font-size: 25px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-30px-normal{
              -fx-font-size: 30px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-64px-normal{
              -fx-font-size: 64px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-35px-normal{
              -fx-font-size: 35px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-20px-normal{
              -fx-font-size: 20px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-right{
