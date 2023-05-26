@@ -9,6 +9,21 @@
 
          }
 
+ .text-16px-normal{
+             -fx-font-size: 16px;
+             -fx-font-family: "Gill Sans", sans-serif;
+         }
+
+ .text-25px-normal{
+             -fx-font-size: 25px;
+             -fx-font-family: "Gill Sans", sans-serif;
+         }
+
+ .text-20px-normal{
+             -fx-font-size: 20px;
+             -fx-font-family: "Gill Sans", sans-serif;
+         }
+
  .text-right{
              -fx-font-size: 16px;
              -fx-font-family: "Gill Sans", sans-serif;
@@ -40,7 +55,9 @@
      -fx-text-fill: #ffffff;
 }
 .button-modify-add-to-cart{
-    -fx-background-radius: 5em;
+     -fx-background-radius: 5em;
+     /*-fx-max-height: 50px;
+    -fx-min-height: 50px;*/
      -fx-border: 0;
      -fx-background:none;
 
@@ -52,6 +69,9 @@
 }
 
 .button-modify-add-to-cart:hover{
+    /*-fx-max-height: 50px;
+    -fx-min-height: 50px;*/
+
     -fx-background-radius: 5em;
      -fx-border: 0;
      -fx-background:none;
@@ -145,4 +165,12 @@
 .cart-button:hover{
 
 -fx-background-color:#DD0000;
+}
+
+
+.selected-category{
+    -fx-background-color: #a18c9f;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
 }

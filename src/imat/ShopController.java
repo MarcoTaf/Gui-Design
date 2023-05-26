@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -56,6 +57,16 @@ public class ShopController extends SubViewController {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     setCategory(category);
+
+                    // Remove CSS class from all buttons
+                    for (Node node : categoryFlowPane.getChildren()) {
+                        if (node instanceof Button) {
+                            node.getStyleClass().remove("selected-category");
+                        }
+                    }
+
+                    // Add CSS class to the clicked button
+                    categoryButton.getStyleClass().add("selected-category");
                 }
             });
             categoryFlowPane.getChildren().add(categoryButton);

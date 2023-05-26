@@ -122,12 +122,12 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <Button fx:id="NästaKnappUppgifter" mnemonicParsing="false" onAction="#switchViewInfo" styleClass="button-modify-add-to-cart" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
+      <Button fx:id="NästaKnappUppgifter" mnemonicParsing="false" onAction="#switchViewInfo" prefHeight="50.0" prefWidth="150.0" styleClass="button-modify-add-to-cart" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#exitView" styleClass="button-modify-add-to-cart" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
+      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#exitView" prefHeight="50.0" prefWidth="150.0" styleClass="button-modify-add-to-cart" stylesheets="@../imat_app.css" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>

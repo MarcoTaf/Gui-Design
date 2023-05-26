@@ -166,3 +166,11 @@
 
 -fx-background-color:#DD0000;
 }
+
+
+.selected-category{
+    -fx-background-color: #a18c9f;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
