@@ -61,6 +61,7 @@ public class ShopController extends SubViewController {
                     // Remove CSS class from all buttons
                     for (Node node : categoryFlowPane.getChildren()) {
                         if (node instanceof Button) {
+
                             node.getStyleClass().remove("selected-category");
                         }
                     }
