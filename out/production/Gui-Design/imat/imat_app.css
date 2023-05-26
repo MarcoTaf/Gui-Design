@@ -9,29 +9,37 @@
 
  .text-16px-normal{
              -fx-font-size: 16px;
-
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-25px-normal{
              -fx-font-size: 25px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-30px-normal{
              -fx-font-size: 30px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-64px-normal{
              -fx-font-size: 64px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-35px-normal{
              -fx-font-size: 35px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
 
  .text-20px-normal{
              -fx-font-size: 20px;
+     -fx-font-family: "Arial Rounded MT Bold", sans-serif;
          }
-
+.text-40px-normal{
+    -fx-font-size: 40px;
+    -fx-font-family: "Arial Rounded MT Bold", sans-serif;
+}
  .text-right{
              -fx-font-size: 16px;
                -fx-text-align:CENTER-RIGHT;
@@ -180,5 +188,5 @@
     -fx-background-color: #a18c9f;
     -fx-text-fill: #000000;
     -fx-font-weight: bold;
-    -fx-font-size: 16px;
+    -fx-font-size: 40px;
 }

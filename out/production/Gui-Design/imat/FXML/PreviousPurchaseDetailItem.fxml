@@ -5,20 +5,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1200.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1200.0" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="Produktnamn" layoutX="355.0" layoutY="22.0" prefHeight="58.0" prefWidth="450.0" text="Varunamn" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="355.0" AnchorPane.topAnchor="22.0">
+      <Label fx:id="Produktnamn" layoutX="194.0" layoutY="23.0" prefHeight="58.0" prefWidth="450.0" styleClass="text-20px-normal" text="Varunamn" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="194.0" AnchorPane.topAnchor="23.0">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <ImageView fx:id="VarukorgDDImage" fitHeight="100.0" fitWidth="187.0" layoutX="95.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="0.0" />
-      <Label fx:id="priceText" layoutX="1279.0" layoutY="17.0" prefHeight="58.0" prefWidth="197.0" text="Totalpris" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="17.0">
+      <ImageView fx:id="VarukorgDDImage" fitHeight="100.0" fitWidth="187.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="2.0" />
+      <Label fx:id="priceText" layoutX="1088.0" layoutY="24.0" prefHeight="58.0" prefWidth="197.0" styleClass="text-20px-normal" text="Totalpris" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="-85.0" AnchorPane.topAnchor="24.0">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <Label fx:id="amountInCart" layoutX="778.0" layoutY="29.0" prefHeight="45.0" prefWidth="80.0" text="jrfjgf" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="778.0" AnchorPane.topAnchor="29.0">
+      <Label fx:id="amountInCart" layoutX="981.0" layoutY="31.0" prefHeight="45.0" prefWidth="80.0" styleClass="text-16px-normal" text="jrfjgf" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="31.0">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

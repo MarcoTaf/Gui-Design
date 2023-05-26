@@ -32,7 +32,7 @@
                         <graphic>
                            <HBox prefHeight="100.0" prefWidth="200.0">
                               <children>
-                                 <Text fx:id="cartPriceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="157.13671875">
+                                 <Text fx:id="cartPriceText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-35px-normal" text="Text" wrappingWidth="157.13671875">
                                     <font>
                                        <Font size="36.0" />
                                     </font>

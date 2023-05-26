@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -23,7 +24,7 @@
       </StackPane>
       <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#f5e3e3" height="600.0" layoutX="100.0" layoutY="280.0" stroke="WHITE" strokeType="INSIDE" width="1740.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" />
       <Line endX="450.0" layoutX="930.0" layoutY="400.0" rotate="90.0" stroke="#f2aeae" strokeMiterLimit="400.0" strokeWidth="2.0" AnchorPane.bottomAnchor="408.0" AnchorPane.leftAnchor="720.0" />
-      <Label alignment="TOP_CENTER" prefHeight="126.0" prefWidth="450.0" text="Betalning" AnchorPane.bottomAnchor="604.0" AnchorPane.leftAnchor="735.0" AnchorPane.rightAnchor="735.0">
+      <Label alignment="TOP_CENTER" prefHeight="126.0" prefWidth="450.0" styleClass="text-64px-normal" text="Betalning" AnchorPane.bottomAnchor="604.0" AnchorPane.leftAnchor="735.0" AnchorPane.rightAnchor="735.0">
          <font>
             <Font size="64.0" />
          </font>
@@ -40,15 +41,23 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="NästaKnappBetalning" mnemonicParsing="false" onAction="#checkNext" prefHeight="50.0" prefWidth="150.0" styleClass="button-modify-add-to-cart" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
+      <Button fx:id="NästaKnappBetalning" mnemonicParsing="false" onAction="#checkNext" prefHeight="50.0" prefWidth="150.0" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5" AnchorPane.rightAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>
+         <styleClass>
+            <String fx:value="button-modify-add-to-cart" />
+            <String fx:value="text-25px-normal" />
+         </styleClass>
       </Button>
-      <Button fx:id="TillbakaKnappBetalning" layoutX="91.0" layoutY="948.0" minHeight="50.0" mnemonicParsing="false" onAction="#switchViewDelivery" prefWidth="150.0" styleClass="button-modify-add-to-cart" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
+      <Button fx:id="TillbakaKnappBetalning" layoutX="91.0" layoutY="948.0" minHeight="50.0" mnemonicParsing="false" onAction="#switchViewDelivery" prefWidth="150.0" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>
+         <styleClass>
+            <String fx:value="button-modify-add-to-cart" />
+            <String fx:value="text-25px-normal" />
+         </styleClass>
       </Button>
       <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="525.0">
          <graphic>
@@ -98,27 +107,27 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="476.0" layoutY="428.0" text="Varukorg" AnchorPane.bottomAnchor="761.0" AnchorPane.leftAnchor="510.0">
+      <Label layoutX="476.0" layoutY="428.0" styleClass="text-20px-normal" text="Varukorg" AnchorPane.bottomAnchor="761.0" AnchorPane.leftAnchor="510.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="486.0" layoutY="438.0" text="Uppgifter" AnchorPane.bottomAnchor="761.0" AnchorPane.leftAnchor="710.0">
+      <Label layoutX="486.0" layoutY="438.0" styleClass="text-20px-normal" text="Uppgifter" AnchorPane.bottomAnchor="761.0" AnchorPane.leftAnchor="710.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="496.0" layoutY="448.0" text="Leverans" AnchorPane.bottomAnchor="761.0" AnchorPane.leftAnchor="915.0">
+      <Label layoutX="496.0" layoutY="448.0" styleClass="text-20px-normal" text="Leverans" AnchorPane.bottomAnchor="761.0" AnchorPane.leftAnchor="915.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="506.0" layoutY="458.0" text="Betalning" AnchorPane.bottomAnchor="761.0" AnchorPane.rightAnchor="710.0">
+      <Label layoutX="506.0" layoutY="458.0" styleClass="text-20px-normal" text="Betalning" AnchorPane.bottomAnchor="761.0" AnchorPane.rightAnchor="710.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="516.0" layoutY="468.0" text="Berkräftelse" AnchorPane.bottomAnchor="761.0" AnchorPane.rightAnchor="500.0">
+      <Label layoutX="516.0" layoutY="468.0" styleClass="text-20px-normal" text="Berkräftelse" AnchorPane.bottomAnchor="761.0" AnchorPane.rightAnchor="500.0">
          <font>
             <Font size="24.0" />
          </font>
@@ -133,32 +142,32 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <Label layoutX="1251.0" layoutY="532.0" text="Summa varor: " AnchorPane.bottomAnchor="493.0" AnchorPane.leftAnchor="1150.0">
+      <Label layoutX="1251.0" layoutY="532.0" styleClass="text-25px-normal" text="Summa varor: " AnchorPane.bottomAnchor="493.0" AnchorPane.leftAnchor="1150.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="1155.0" layoutY="635.0" text="Avgift:" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="1150.0">
+      <Label layoutX="1155.0" layoutY="635.0" styleClass="text-25px-normal" text="Avgift:" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="1150.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="1165.0" layoutY="645.0" text="Total summa:" AnchorPane.bottomAnchor="353.0" AnchorPane.leftAnchor="1150.0">
+      <Label layoutX="1165.0" layoutY="645.0" styleClass="text-25px-normal" text="Total summa:" AnchorPane.bottomAnchor="353.0" AnchorPane.leftAnchor="1150.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="SummaVarorPris" layoutX="1261.0" layoutY="542.0" text="Pris" AnchorPane.bottomAnchor="493.0" AnchorPane.leftAnchor="1400.0">
+      <Label fx:id="SummaVarorPris" layoutX="1261.0" layoutY="542.0" styleClass="text-25px-normal" text="Pris" AnchorPane.bottomAnchor="493.0" AnchorPane.leftAnchor="1400.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="AvgiftPris" layoutX="1271.0" layoutY="552.0" text="Pris" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="1400.0">
+      <Label fx:id="AvgiftPris" layoutX="1271.0" layoutY="552.0" styleClass="text-25px-normal" text="Pris" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="1400.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="TotalsummaPris" layoutX="1281.0" layoutY="562.0" text="Pris" AnchorPane.bottomAnchor="353.0" AnchorPane.leftAnchor="1400.0">
+      <Label fx:id="TotalsummaPris" layoutX="1281.0" layoutY="562.0" styleClass="text-25px-normal" text="Pris" AnchorPane.bottomAnchor="353.0" AnchorPane.leftAnchor="1400.0">
          <font>
             <Font size="30.0" />
          </font>
@@ -176,11 +185,6 @@
       <Label layoutX="390.0" layoutY="473.0" prefHeight="54.0" prefWidth="22.0" text="/">
          <font>
             <Font size="37.0" />
-         </font>
-      </Label>
-      <Label layoutX="408.0" layoutY="281.0" prefHeight="81.0" prefWidth="378.0" text="Kortinformation för betalning">
-         <font>
-            <Font size="17.0" />
          </font>
       </Label>
       <Label fx:id="cardNumError" layoutX="280.0" layoutY="354.0" text="Label" textFill="RED" />
