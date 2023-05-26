@@ -37,7 +37,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="NästaKnappLeverans" mnemonicParsing="false" onAction="#switchViewPayment" styleClass="button-modify-add-to-cart" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5">
+      <Button fx:id="NästaKnappLeverans" mnemonicParsing="false" onAction="#canNext" styleClass="button-modify-add-to-cart" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="1671.5">
          <font>
             <Font size="36.0" />
          </font>
