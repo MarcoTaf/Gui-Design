@@ -119,8 +119,19 @@
 
 .previous-purchase-card{
 -fx-background-color:#FFFFFF;
+-fx-background-radius: 1em;
 }
 
 .previous-purchase-card:hover{
--fx-background-color:#80808080;
+-fx-background-color:#DDDDDD;
+}
+
+.cart-button{
+
+-fx-background-color:#FF0000;
+}
+
+.cart-button:hover{
+
+-fx-background-color:#DD0000;
 }
