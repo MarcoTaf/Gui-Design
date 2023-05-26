@@ -58,7 +58,9 @@ public class ShopController extends SubViewController {
                 public void handle(ActionEvent actionEvent) {
                     setCategory(category);
 
-                    // Remove CSS class from all buttons
+                    boolean hasSelectedClass = categoryButton.getStyleClass().contains("selected-category");
+
+
                     for (Node node : categoryFlowPane.getChildren()) {
                         if (node instanceof Button) {
 
@@ -66,8 +68,10 @@ public class ShopController extends SubViewController {
                         }
                     }
 
-                    // Add CSS class to the clicked button
-                    categoryButton.getStyleClass().add("selected-category");
+
+                    if (!hasSelectedClass) {
+                        categoryButton.getStyleClass().add("selected-category");
+                    }
                 }
             });
             categoryFlowPane.getChildren().add(categoryButton);
