@@ -53,6 +53,50 @@ public class CheckoutInfoController extends CheckoutViewsController {
         postNumField.setText(customer.getPostCode());
         postOrtField.setText(customer.getPostAddress());
         nameError.setText("");
+
+        firstNameField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setFirstName(t1);
+            }
+        });
+
+        lastNameField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setLastName(t1);
+            }
+        });
+        mailField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setEmail(t1);
+            }
+        });
+        telField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setPhoneNumber(t1);
+            }
+        });
+        addressField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setAddress(t1);
+            }
+        });
+        postNumField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setPostCode(t1);
+            }
+        });
+        postOrtField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                customer.setPostAddress(t1);
+            }
+        });
     }
 
     public void fieldChanged()
