@@ -9,12 +9,12 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1600.0" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="Produktnamn" layoutX="355.0" layoutY="22.0" prefHeight="58.0" prefWidth="450.0" text="Varunamn">
+      <Label fx:id="Produktnamn" layoutX="355.0" layoutY="22.0" prefHeight="58.0" prefWidth="450.0" styleClass="text-40px-normal" text="Varunamn">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <Button fx:id="VarukorgDDTaBort" layoutX="8.0" layoutY="37.0" mnemonicParsing="false" onAction="#removeSelf" prefHeight="29.0" prefWidth="33.0" styleClass="button-modify-add-to-cart">
+      <Button fx:id="VarukorgDDTaBort" layoutX="8.0" layoutY="37.0" mnemonicParsing="false" onAction="#removeSelf" prefHeight="40.0" prefWidth="40.0" styleClass="button-modify-add-to-cart" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="30.0">
          <graphic>
             <ImageView fx:id="VarukorgDDIstäng" fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -28,14 +28,14 @@
          <children>
             <Button fx:id="productRemoveFromAdd" mnemonicParsing="false" onAction="#removeFromSelf" prefHeight="44.0" prefWidth="41.0" styleClass="button-modify-add-to-cart" text="-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Button fx:id="productAdd" layoutX="179.0" layoutY="-4.0" minHeight="27.0" mnemonicParsing="false" onAction="#addToSelf" prefHeight="44.0" prefWidth="41.0" styleClass="button-modify-add-to-cart" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Label fx:id="amountInCart" layoutX="70.0" layoutY="-3.0" prefHeight="45.0" prefWidth="80.0" text="jrfjgf" textFill="WHITE">
+            <Label fx:id="amountInCart" layoutX="70.0" layoutY="-3.0" prefHeight="45.0" prefWidth="80.0" styleClass="text-25px-normal" text="jrfjgf" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <Label fx:id="priceText" layoutX="1279.0" layoutY="17.0" prefHeight="58.0" prefWidth="197.0" text="Totalpris">
+      <Label fx:id="priceText" layoutX="1279.0" layoutY="17.0" prefHeight="58.0" prefWidth="197.0" styleClass="text-30px-normal" text="Totalpris">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
