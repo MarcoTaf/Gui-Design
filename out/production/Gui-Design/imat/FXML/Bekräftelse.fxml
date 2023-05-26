@@ -9,12 +9,13 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../../../../Github/Gui-Design/src/imat/imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="885.0" prefWidth="1920.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <effect>
@@ -50,7 +51,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchViewConfirm" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="525.0">
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" styleClass="invisible-button" AnchorPane.bottomAnchor="810.0" AnchorPane.rightAnchor="525.0">
          <graphic>
             <ImageView fx:id="Knapp5Bekräftelse" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -130,11 +131,11 @@
          </font>
       </Label>
       <ScrollPane fitToWidth="true" hbarPolicy="NEVER" hmax="20.0" hvalue="15.0" layoutX="369.0" layoutY="520.0" prefHeight="280.0" prefViewportHeight="20.0" prefViewportWidth="20.0" prefWidth="600.0" vmax="40.0" vvalue="20.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="230.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="600.0" />
-        </content>
+         <content>
+            <FlowPane fx:id="productFlowpane" prefHeight="278.0" prefWidth="598.0" vgap="10.0" />
+         </content>
       </ScrollPane>
-      <Button fx:id="TillbakaKnappLeverans1" layoutX="101.0" layoutY="958.0" mnemonicParsing="false" onAction="#finishPurchase" prefWidth="300.0" text="Bekräfta köp" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="820.0" AnchorPane.rightAnchor="820.0">
+      <Button fx:id="TillbakaKnappLeverans1" layoutX="101.0" layoutY="958.0" mnemonicParsing="false" onAction="#finishPurchase" prefWidth="300.0" styleClass="button-modify-add-to-cart" text="Bekräfta köp" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="820.0" AnchorPane.rightAnchor="820.0">
          <font>
             <Font size="40.0" />
          </font>
@@ -166,12 +167,12 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="PrisLeveranssätt" layoutX="328.0" layoutY="673.0" text="Pris" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="790.0">
+      <Label fx:id="PrisLeveranssätt" layoutX="328.0" layoutY="673.0" prefHeight="25.0" prefWidth="112.0" text="Pris" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="790.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="PrisSummaVaror" layoutX="318.0" layoutY="663.0" text="Pris" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="790.0">
+      <Label fx:id="PrisSummaVaror" layoutX="318.0" layoutY="663.0" prefHeight="25.0" prefWidth="112.0" text="Pris" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="790.0">
          <font>
             <Font size="30.0" />
          </font>
@@ -181,7 +182,7 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="TotaltPris" layoutX="328.0" layoutY="673.0" prefWidth="50.0" text="Pris" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="1640.0">
+      <Label fx:id="TotalPris" layoutX="328.0" layoutY="673.0" prefHeight="25.0" prefWidth="145.0" text="Pris" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="1640.0">
          <font>
             <Font size="30.0" />
          </font>
@@ -191,12 +192,12 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="Prismoms" layoutX="338.0" layoutY="683.0" text="Pris" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="1640.0">
+      <Label fx:id="Prismoms" layoutX="338.0" layoutY="683.0" prefHeight="25.0" prefWidth="145.0" text="Pris" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="1640.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button fx:id="TillbakaKnappLeverans" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#switchViewPayment" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
+      <Button fx:id="TillbakaKnappLeverans" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#switchViewPayment" styleClass="button-modify-add-to-cart" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>

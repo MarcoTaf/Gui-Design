@@ -9,6 +9,12 @@
 
          }
 
+ .text-right{
+             -fx-font-size: 16px;
+             -fx-font-family: "Gill Sans", sans-serif;
+               -fx-text-align:CENTER-RIGHT;
+         }
+
 .button{
     -fx-background-radius: 5em;
 
@@ -23,6 +29,16 @@
      -fx-background-color: #ff0000;
      -fx-text-fill: #ffffff;
 }
+
+.button-add-to-cart:hover{
+    -fx-background-radius: 5em;
+     -fx-border: 0;
+
+     -fx-box-shadow: none;
+     -fx-border-radius: 1px;
+     -fx-background-color: #ff3030;
+     -fx-text-fill: #ffffff;
+}
 .button-modify-add-to-cart{
     -fx-background-radius: 5em;
      -fx-border: 0;
@@ -32,6 +48,18 @@
      -fx-border-radius: 5em;
      -fx-border-color: #79747E;
 
+
+}
+
+.button-modify-add-to-cart:hover{
+    -fx-background-radius: 5em;
+     -fx-border: 0;
+     -fx-background:none;
+
+     -fx-box-shadow: none;
+     -fx-border-radius: 5em;
+     -fx-border-color: #79747E;
+     -fx-background-color: #04040430;
 
 }
 
@@ -54,7 +82,16 @@
 }
 
 .invisible-button{
-    -fx-background:node;
+    -fx-background:none;
+}
+
+.invisible-button:pressed{
+    -fx-background-color:#04040490;
+}
+
+.invisible-button:hover{
+    -fx-background:none;
+    -fx-background-color:#04040430;
 }
 .start-button:hover {
     -fx-background-color:#dae7f3;
@@ -66,4 +103,35 @@
     -fx-text-box-border: transparent;
     -fx-background-insets: 0;
     -fx-focus-color: transparent;
+}
+
+.button-category{
+    -fx-background-radius:2px;
+    -fx-background-color:#800000;
+    -fx-text-align:center;
+}
+
+.button-category:hover{
+    -fx-background-radius:2px;
+    -fx-background-color:#803030;
+    -fx-align:CENTER;
+}
+
+.previous-purchase-card{
+-fx-background-color:#FFFFFF;
+-fx-background-radius: 1em;
+}
+
+.previous-purchase-card:hover{
+-fx-background-color:#DDDDDD;
+}
+
+.cart-button{
+
+-fx-background-color:#FF0000;
+}
+
+.cart-button:hover{
+
+-fx-background-color:#DD0000;
 }

@@ -5,3 +5,7 @@
 .idea/
 out/
 out/*
+/out/*
+/out/
+./out/
+./out/*
