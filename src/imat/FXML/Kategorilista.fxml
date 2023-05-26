@@ -33,7 +33,7 @@
          </ScrollPane>
          <AnchorPane prefHeight="72.0" prefWidth="1548.0" style="-fx-background-color: #FFE5E5;" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-               <Button fx:id="ecoEnabledButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#flipEco" prefHeight="55.0" prefWidth="150.0" text="Ekologiskt" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0">
+               <Button fx:id="ecoEnabledButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#flipEco" prefHeight="55.0" prefWidth="170.0" text="Ekologiskt" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0">
                   <font>
                      <Font name="Arial Rounded MT Bold" size="20.0" />
                   </font>
@@ -41,7 +41,7 @@
                      <String fx:value="button-modify-add-to-cart" />
                      <String fx:value="text-25px-normal" />
                   </styleClass></Button>
-               <Button layoutX="145.0" layoutY="9.0" mnemonicParsing="false" onAction="#setSortingModeTop" prefHeight="55.0" prefWidth="242.0" text="Pris lägst till högst" AnchorPane.leftAnchor="175.0">
+               <Button layoutX="145.0" layoutY="9.0" mnemonicParsing="false" onAction="#setSortingModeTop" prefHeight="55.0" prefWidth="260.0" text="Pris lägst till högst" AnchorPane.leftAnchor="195.0">
                   <font>
                      <Font name="Arial Rounded MT Bold" size="20.0" />
                   </font>
@@ -49,7 +49,7 @@
                      <String fx:value="button-modify-add-to-cart" />
                      <String fx:value="text-25px-normal" />
                   </styleClass></Button>
-               <Button layoutX="432.0" layoutY="9.0" mnemonicParsing="false" onAction="#setSortingModeBottom" prefHeight="55.0" prefWidth="248.0" text="Pris högst till lägst" AnchorPane.leftAnchor="432.0">
+               <Button layoutX="432.0" layoutY="9.0" mnemonicParsing="false" onAction="#setSortingModeBottom" prefHeight="55.0" prefWidth="260.0" text="Pris högst till lägst" AnchorPane.leftAnchor="470.0">
                   <font>
                      <Font name="Arial Rounded MT Bold" size="20.0" />
                   </font>
