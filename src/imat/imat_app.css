@@ -117,13 +117,14 @@
 
 .button-category{
     -fx-background-radius:2px;
-    -fx-background-color:#800000;
+    -fx-background-color: #dac1c9;
     -fx-text-align:center;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
 }
 
 .button-category:hover{
     -fx-background-radius:2px;
-    -fx-background-color:#803030;
+    -fx-background-color: #b19faf;
     -fx-align:CENTER;
 }
 
