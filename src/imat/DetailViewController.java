@@ -3,6 +3,7 @@ package imat;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -16,6 +17,8 @@ public class DetailViewController extends SubViewController{
     private IMatDataHandler database;
     private int amountToAdd;
     private ShoppingCart shoppingCart;
+    public Label productNamn;
+    public Label priceLabel;
     @FXML
     public AnchorPane backgroundAnchor;
     @FXML
@@ -52,6 +55,8 @@ public class DetailViewController extends SubViewController{
         }
 
         image.setImage(database.getFXImage(targetProduct));
+        productNamn.setText(targetProduct.getName());
+        priceLabel.setText("Pris:" + targetProduct.getPrice() + " " +  targetProduct.getUnit());
         updateAmountText();
 
     }
@@ -90,6 +95,6 @@ public class DetailViewController extends SubViewController{
 
     private void updateAmountText()
     {
-        productAddAmount.setText(String.valueOf(amountToAdd) + " st");
+        productAddAmount.setText(String.valueOf(amountToAdd) + " " + targetProduct.getUnitSuffix());
     }
 }
