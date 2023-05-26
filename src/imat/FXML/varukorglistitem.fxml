@@ -9,11 +9,11 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="358.0" layoutY="63.0" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #F8BDBD;" styleClass="product-add-to-card-background">
+      <AnchorPane layoutX="333.0" layoutY="53.0" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: #F8BDBD;" styleClass="product-add-to-card-background">
          <children>
-            <Button fx:id="productRemoveFromAdd" mnemonicParsing="false" onAction="#removeFromSelf" prefHeight="30.0" prefWidth="30.0" styleClass="button-modify-add-to-cart" text="-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="productAdd" layoutX="179.0" layoutY="-4.0" minHeight="27.0" mnemonicParsing="false" onAction="#addToSelf" prefHeight="30.0" prefWidth="30.0" styleClass="button-modify-add-to-cart" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Label fx:id="amountInCart" layoutX="35.0" layoutY="8.0" prefHeight="25.0" prefWidth="54.0" textFill="WHITE">
+            <Button fx:id="productRemoveFromAdd" mnemonicParsing="false" onAction="#removeFromSelf" prefHeight="42.0" prefWidth="41.0" styleClass="button-modify-add-to-cart" text="-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="productAdd" layoutX="179.0" layoutY="-4.0" minHeight="27.0" mnemonicParsing="false" onAction="#addToSelf" prefHeight="42.0" prefWidth="41.0" styleClass="button-modify-add-to-cart" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label fx:id="amountInCart" layoutX="46.0" layoutY="3.0" prefHeight="36.0" prefWidth="70.0" styleClass="text-25px-normal" text="Num" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -30,17 +30,17 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label fx:id="Produktnamn" layoutX="166.0" layoutY="11.0" prefHeight="35.0" prefWidth="203.0" text="Produktnamn">
+      <Label fx:id="Produktnamn" layoutX="166.0" layoutY="11.0" prefHeight="35.0" prefWidth="203.0" styleClass="text-25px-normal" text="Produktnamn">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="priceText" layoutX="434.0" layoutY="11.0" text="SEK" textAlignment="RIGHT" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="11.0">
+      <Label fx:id="priceText" layoutX="434.0" layoutY="11.0" styleClass="text-25px-normal" text="SEK" textAlignment="RIGHT" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="11.0">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label fx:id="prisperstyck" layoutX="166.0" layoutY="68.0" prefHeight="25.0" prefWidth="90.0" text="Pris per styck">
+      <Label fx:id="prisperstyck" layoutX="166.0" layoutY="61.0" prefHeight="36.0" prefWidth="168.0" styleClass="text-25px-normal" text="Pris per styck">
          <font>
             <Font size="15.0" />
          </font>
