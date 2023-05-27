@@ -24,7 +24,7 @@ public class ShopController extends SubViewController {
     private HashMap<Product, ProductCardController> productCardDatabase = new HashMap<Product, ProductCardController>();
     private ProductCategory currentCategory = null;
     private boolean ecoEnabled = false;
-    private sortMode sortingMode = sortMode.none; //I think I am dying bad names oh god
+    private sortMode sortingMode = sortMode.none;
 
     private HashMap<String, String> categoryNames = new HashMap<String, String>();
 
@@ -89,11 +89,6 @@ public class ShopController extends SubViewController {
         List<Product> productsUnsorted;
         if (searchTemrs == null)
         {
-            /*WTF? The list this spits out is not a copy. It's the actual original list of all the products
-            that the code has access to. This means that if you manipulate or edit this list in any way
-            then that means that all products will be wiped from the code since this is also the list it saves.
-            Why would you ever have a setup like this???
-             */
             productsUnsorted = new ArrayList<Product>(database.getProducts());
         }
         else
@@ -107,7 +102,7 @@ public class ShopController extends SubViewController {
                 products = sortList(productsUnsorted);
                 break;
             case bottom:
-                products = new ArrayList<Product>();//This code was brouht to you by Java, who cannot even make a reverseing method for their god damn lists.
+                products = new ArrayList<Product>();
                 List<Product> sortedList = sortList(productsUnsorted);
                 while(sortedList.size() > 0)
                 {
@@ -116,7 +111,7 @@ public class ShopController extends SubViewController {
                 }
                 break;
             default:
-                products = productsUnsorted; //Dear IDE, I feel like I am losing my sanity with you.
+                products = productsUnsorted;
                 break;
         }
         System.out.println(String.valueOf(sortingMode));

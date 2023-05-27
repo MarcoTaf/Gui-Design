@@ -14,7 +14,7 @@
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <Button fx:id="VarukorgDDTaBort" layoutX="8.0" layoutY="37.0" mnemonicParsing="false" onAction="#removeSelf" prefHeight="40.0" prefWidth="40.0" styleClass="button-modify-add-to-cart" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="30.0">
+      <Button fx:id="VarukorgDDTaBort" layoutX="8.0" layoutY="37.0" mnemonicParsing="false" onAction="#removeSelf" prefHeight="40.0" prefWidth="40.0" styleClass="invisible-button" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="30.0">
          <graphic>
             <ImageView fx:id="VarukorgDDIstäng" fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                <image>

@@ -72,7 +72,7 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
                 int min = getLastTWoNum(t1);
                 int hours = t1 - min;
 
-                if (min == 60)//This is horrible -MT
+                if (min == 60)
                 {
                     hours+=100;
                     min = 0;
@@ -93,7 +93,7 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
 
                 int newTime = hours + min;
 
-                timeSpinner.getValueFactory().setValue(newTime);//There is a bug here for 2200 going down. I do not have the time to fix. Fuck it. NVM fixed it
+                timeSpinner.getValueFactory().setValue(newTime);
                 String minText = String.valueOf(min);
 
                 if (minText.length() <= 1)

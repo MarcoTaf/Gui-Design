@@ -130,7 +130,7 @@ public class MainViewController implements Initializable {
     }
     private boolean canSwitchView()
     {
-        if (currentView == null)//So why can this not just go under default? Be reasonable now.
+        if (currentView == null)
         {
             return true;
         }
@@ -199,7 +199,7 @@ public class MainViewController implements Initializable {
                 previousView.add(currentView);
             }
 
-            CurrentViewInfo targetView = new CurrentViewInfo(target, product, string, targetOrder,shopController.getCategory(), shopController.getEco(), shopController.getSortMode());//BRB gonna need to get an ultra wide laptop to handle the amount of god damn arguments here. If I ask for wheels to be put onto it, do you think I can skate on it?
+            CurrentViewInfo targetView = new CurrentViewInfo(target, product, string, targetOrder,shopController.getCategory(), shopController.getEco(), shopController.getSortMode());
             executeViewSwitch(targetView);
         }
 

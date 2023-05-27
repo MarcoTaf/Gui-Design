@@ -52,7 +52,7 @@ public class PreviousPurcahseCard extends SubViewController{
 
     private void addRandImg(ImageView target)
     {
-        target.setImage(IMatDataHandler.getInstance().getFXImage(targetOrder.getItems().get(new Random().nextInt(targetOrder.getItems().size())).getProduct()));//I'm going to be real, I just wanted to see how long this thing could get.
+        target.setImage(IMatDataHandler.getInstance().getFXImage(targetOrder.getItems().get(new Random().nextInt(targetOrder.getItems().size())).getProduct()));
     }
 
     public void openDetail()
