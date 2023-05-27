@@ -129,9 +129,9 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <HBox layoutX="601.0" layoutY="237.0" prefHeight="43.0" prefWidth="550.0" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="270.0">
+      <HBox layoutX="244.0" layoutY="237.0" prefHeight="43.0" prefWidth="576.0" AnchorPane.bottomAnchor="550.0" AnchorPane.leftAnchor="244.0">
          <children>
-            <RadioButton fx:id="radioDelivery" mnemonicParsing="false" prefWidth="300.0" styleClass="text-25px-normal" text="Hemleverans" textAlignment="JUSTIFY">
+            <RadioButton fx:id="radioDelivery" mnemonicParsing="false" prefHeight="36.0" prefWidth="354.0" styleClass="text-25px-normal" text="Hemleverans" textAlignment="JUSTIFY">
                <font>
                   <Font size="25.0" />
                </font>
@@ -143,13 +143,15 @@
             </RadioButton>
          </children>
       </HBox>
-      <DatePicker fx:id="datePicker" layoutX="683.0" layoutY="346.0" prefHeight="100.0" prefWidth="220.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="250.0" />
-      <Spinner fx:id="timeSpinner" layoutX="683.0" layoutY="489.0" prefHeight="100.0" prefWidth="220.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="600.0" />
+      <DatePicker fx:id="datePicker" layoutX="683.0" layoutY="346.0" prefHeight="100.0" prefWidth="220.0" styleClass="text-25px-normal" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="250.0" />
+      <Spinner fx:id="timeSpinner" layoutX="683.0" layoutY="489.0" prefHeight="100.0" prefWidth="220.0" styleClass="text-25px-normal" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="600.0" />
       <Text fx:id="dateText" layoutX="991.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Valt datum" wrappingWidth="163.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="1100.0" />
       <Text fx:id="timeText" layoutX="991.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Vald tid" wrappingWidth="153.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="1500.0" />
-      <Text fx:id="addedPrice" layoutX="991.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Valt leveranssätt" textAlignment="CENTER" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="1250.0" />
-      <Label fx:id="radioError" layoutX="429.0" layoutY="244.0" styleClass="text-20px-normal" text="Välj en" textAlignment="RIGHT" textFill="RED" AnchorPane.leftAnchor="500.0" />
-      <Label fx:id="dateError" layoutX="539.0" layoutY="383.0" styleClass="text-20px-normal" text="Välj ett datum" textAlignment="RIGHT" textFill="RED" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="305.0" />
+      <Text fx:id="addedPrice" layoutX="1254.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Valt leveranssätt" textAlignment="CENTER" AnchorPane.bottomAnchor="595.470703125" AnchorPane.leftAnchor="1254.0" />
+      <Label fx:id="radioError" layoutX="400.0" layoutY="244.0" styleClass="text-20px-normal" text="Välj en" textAlignment="RIGHT" textFill="RED" AnchorPane.leftAnchor="400.0" />
+      <Label fx:id="dateError" layoutX="250.0" layoutY="606.0" styleClass="text-20px-normal" text="Välj ett datum" textAlignment="RIGHT" textFill="RED" AnchorPane.bottomAnchor="249.0" AnchorPane.leftAnchor="250.0" />
+      <Text fx:id="deliveryCost" layoutX="1254.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Text" />
+      <Text layoutX="292.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-16px-normal" text="Kostnad: 99 kr" />
    </children>
    <effect>
       <ColorAdjust />

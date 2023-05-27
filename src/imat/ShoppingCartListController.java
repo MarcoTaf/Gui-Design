@@ -50,6 +50,8 @@ public class ShoppingCartListController extends SubViewController{
 
     public void goToCheckout()
     {
-        owner.switchView(MainViewController.view.checkoutCart);
+        owner.storeLastViewInCheckoutInfo();
+        owner.switchView(MainViewController.view.checkoutCart
+        );
     }
 }

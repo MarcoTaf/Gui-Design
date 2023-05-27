@@ -32,4 +32,9 @@ public class CheckoutItemsController extends CheckoutViewsController{
         }
         totalCostLabel.setText(String.valueOf(IMatDataHandler.getInstance().getShoppingCart().getTotal()));
     }
+
+    public void exitCheckout()
+    {
+        owner.switchView(CheckoutInfo.getInstance().lastViewBeofreCheckout);
+    }
 }

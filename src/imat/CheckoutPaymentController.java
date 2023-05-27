@@ -32,8 +32,8 @@ public class CheckoutPaymentController extends CheckoutViewsController{
         ÅÅ.setText(String.valueOf(card.getValidYear()));
         CVCBetalning.setText(String.valueOf(card.getVerificationCode()));
         SummaVarorPris.setText(String.valueOf(String.valueOf(IMatDataHandler.getInstance().getShoppingCart().getTotal())) + " kr");
-        AvgiftPris.setText(String.valueOf(MathF.twoDecimans(owner.fines)) + " kr");
-        TotalsummaPris.setText(String.valueOf(owner.getTotalCost()) + " kr");
+        AvgiftPris.setText(String.valueOf(MathF.twoDecimans(CheckoutInfo.getInstance().fines)) + " kr");
+        TotalsummaPris.setText(String.valueOf(CheckoutInfo.getInstance().getTotal()) + " kr");
 
         cardNumError.setText("");
         MMÅÅError.setText("");

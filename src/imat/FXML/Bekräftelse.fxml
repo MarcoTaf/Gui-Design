@@ -47,7 +47,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label fx:id="ValtLeveranssätt" layoutX="1296.0" layoutY="418.0" styleClass="text-30px-normal" text="Hämta i butik" AnchorPane.bottomAnchor="580.0" AnchorPane.rightAnchor="450.0">
+      <Label fx:id="ValtLeveranssätt" layoutX="1313.0" layoutY="236.0" styleClass="text-30px-normal" text="Hämta varor" AnchorPane.bottomAnchor="604.0" AnchorPane.rightAnchor="442.0">
          <font>
             <Font size="36.0" />
          </font>
@@ -125,8 +125,8 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="90.0" arcWidth="80.0" fill="#f9fbfc" height="70.0" layoutX="435.0" layoutY="514.0" stroke="#fcfcfc" strokeType="INSIDE" width="600.0" AnchorPane.bottomAnchor="490.0" AnchorPane.rightAnchor="230.0" />
-      <Label fx:id="ValdAffärFörUpphämtning" layoutX="1113.0" layoutY="420.0" styleClass="text-25px-normal" text="Imat Affär" AnchorPane.bottomAnchor="507.0" AnchorPane.leftAnchor="1126.5">
+      <Rectangle arcHeight="90.0" arcWidth="80.0" fill="#f9fbfc" height="120.0" layoutX="1090.0" layoutY="298.0" stroke="#fcfcfc" strokeType="INSIDE" width="600.0" AnchorPane.bottomAnchor="467.0" AnchorPane.rightAnchor="230.0" />
+      <Label fx:id="ValdAffärFörUpphämtning" layoutX="1127.0" layoutY="322.0" prefHeight="36.0" prefWidth="294.0" styleClass="text-25px-normal" text="Leverans Info" AnchorPane.bottomAnchor="527.0" AnchorPane.leftAnchor="1127.0">
          <font>
             <Font size="30.0" />
          </font>
@@ -205,7 +205,16 @@
             <String fx:value="text-25px-normal" />
          </styleClass>
       </Button>
-      <Label layoutX="1470.0" layoutY="322.0" text="text med vald dag och tid" textFill="#e60808" AnchorPane.bottomAnchor="515.0" />
+      <Label fx:id="dateInfo" layoutX="1127.0" layoutY="368.0" prefHeight="36.0" prefWidth="294.0" styleClass="text-25px-normal" text="Datum">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="tidInfo" layoutX="1452.0" layoutY="368.0" prefHeight="36.0" prefWidth="294.0" styleClass="text-25px-normal" text="Tid">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
    <effect>
       <ColorAdjust />

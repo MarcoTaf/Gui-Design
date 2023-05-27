@@ -1,5 +1,6 @@
 package imat;
 
+import javafx.scene.control.DatePicker;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class CheckoutInfo {
@@ -7,6 +8,10 @@ public class CheckoutInfo {
 
     public double fines = 0;
     public boolean delivery = false;
+
+    public MainViewController.CurrentViewInfo lastViewBeofreCheckout = null;
+    public String deliverDateString;
+    public String deliverTimeString = "9:00";
 
 
 

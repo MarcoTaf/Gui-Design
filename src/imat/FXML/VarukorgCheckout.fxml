@@ -132,7 +132,7 @@
             <String fx:value="text-25px-normal" />
          </styleClass>
       </Button>
-      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#exitView" prefHeight="50.0" prefWidth="150.0" stylesheets="@../imat_app.css" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
+      <Button fx:id="TillbakaKnappUppgifter" layoutX="91.0" layoutY="948.0" mnemonicParsing="false" onAction="#exitCheckout" prefHeight="50.0" prefWidth="150.0" stylesheets="@../imat_app.css" text="Tillbaka" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="100.0">
          <font>
             <Font size="36.0" />
          </font>

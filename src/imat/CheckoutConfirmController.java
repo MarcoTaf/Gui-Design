@@ -6,6 +6,7 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
+import javax.swing.text.LabelView;
 import java.util.List;
 
 public class CheckoutConfirmController extends CheckoutViewsController{
@@ -16,6 +17,9 @@ public class CheckoutConfirmController extends CheckoutViewsController{
     public Label TotalPris;
     public Label Prismoms;
     public Label DittKortnummer;
+    public Label ValdAffärFörUpphämtning;
+    public Label dateInfo;
+    public Label tidInfo;
 
     public CheckoutConfirmController(MainViewController owner)
     {
@@ -43,12 +47,24 @@ public class CheckoutConfirmController extends CheckoutViewsController{
             productFlowpane.getChildren().add(item);
         }
         PrisSummaVaror.setText(String.valueOf(cart.getTotal()) + " kr");
-        PrisLeveranssätt.setText(String.valueOf(owner.fines) + " kr");
-        TotalPris.setText(String.valueOf(owner.getTotalCost()) + " kr");
+        PrisLeveranssätt.setText(String.valueOf(CheckoutInfo.getInstance().fines) + " kr");
+        TotalPris.setText(String.valueOf(CheckoutInfo.getInstance().getTotal()) + " kr");
         Prismoms.setText(String.valueOf(cart.getTotal()/4) + " kr");
         String cardNum = IMatDataHandler.getInstance().getCreditCard().getCardNumber();
         cardNum = cardNum.substring(cardNum.length()-4);
         DittKortnummer.setText("**** **** **** " + cardNum);
 
+        if (CheckoutInfo.getInstance().delivery)
+        {
+
+            ValdAffärFörUpphämtning.setText("Leverans: " + IMatDataHandler.getInstance().getCustomer().getAddress());
+        }
+        else
+        {
+            ValdAffärFörUpphämtning.setText("Hämtas i butik");
+        }
+
+        dateInfo.setText("Datum: " + CheckoutInfo.getInstance().deliverDateString);
+        tidInfo.setText("Tid: " + CheckoutInfo.getInstance().deliverTimeString);
     }
 }

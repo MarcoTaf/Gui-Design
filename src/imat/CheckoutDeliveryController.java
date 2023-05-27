@@ -15,6 +15,7 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
     public Text addedPrice;
     public Text dateText;
     public Text timeText;
+    public Text deliveryCost;
     public Spinner<Integer> timeSpinner;
     public DatePicker datePicker;
 
@@ -24,6 +25,9 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
     public CheckoutDeliveryController(MainViewController owner)
     {
         super("Leverans.fxml", owner);
+        radioError.setText("");
+        dateError.setText("");
+        deliveryCost.setText("Leverans Kostnad: ");
         deliveryPicker = new ToggleGroup();
 
         radioDelivery.setToggleGroup(deliveryPicker);
@@ -35,6 +39,7 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
                 if (t1)
                 {
                     CheckoutInfo.getInstance().setDelivery(true);
+                    deliveryCost.setText("Leverans Kostnad: " + String.valueOf(Math.round(CheckoutInfo.getInstance().fines)) + " kr");
                 }
             }
         });
@@ -42,7 +47,8 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
         radioStore.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                CheckoutInfo.getInstance().setDelivery(true);
+                CheckoutInfo.getInstance().setDelivery(false);
+                deliveryCost.setText("Leverans Kostnad: " + String.valueOf(Math.round(CheckoutInfo.getInstance().fines)) + " kr");
             }
         });
 
@@ -53,6 +59,7 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
             @Override
             public void changed(ObservableValue<? extends LocalDate> observableValue, LocalDate localDate, LocalDate t1) {
                 dateText.setText("Datum: " + String.valueOf(t1));
+                CheckoutInfo.getInstance().deliverDateString = String.valueOf(t1);
             }
         });
 
@@ -87,8 +94,15 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
                 int newTime = hours + min;
 
                 timeSpinner.getValueFactory().setValue(newTime);//There is a bug here for 2200 going down. I do not have the time to fix. Fuck it. NVM fixed it
+                String minText = String.valueOf(min);
 
-                timeText.setText("Tid: " + String.valueOf(hours/100) + ":" + String.valueOf(min));
+                if (minText.length() <= 1)
+                {
+                    minText += "0";
+                }
+                String timeString = String.valueOf(hours/100) + ":" + minText;
+                CheckoutInfo.getInstance().deliverTimeString = timeString;
+                timeText.setText("Tid: " + timeString);
             }
         });
     }
@@ -112,7 +126,7 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
 
         if (!(radioStore.isSelected()) && !(radioDelivery.isSelected()))
         {
-            radioError.setText("You need to choose how to recieve the wares");
+            radioError.setText("Välj hur varorna ska mottas");
             canGoNext = false;
         }
         else
@@ -122,7 +136,7 @@ public class CheckoutDeliveryController extends CheckoutViewsController{
 
         if (datePicker.getEditor().getText() == "")
         {
-            dateError.setText("Please choose a date");
+            dateError.setText("Välj ett datum");
             canGoNext = false;
         }
         else

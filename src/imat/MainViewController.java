@@ -23,8 +23,6 @@ import javax.tools.Tool;
 
 public class MainViewController implements Initializable {
 
-    public double fines = 0;
-
     private ShopController shopController;
     private MyInfoController myInfoController;
     private ToolbarController toolbarController;
@@ -206,6 +204,24 @@ public class MainViewController implements Initializable {
         }
 
     }
+
+    public void switchView(CurrentViewInfo targetView) {
+        if (canSwitchView())
+        {
+
+            if (!(currentView == null)) {
+                previousView.add(currentView);
+            }
+
+            executeViewSwitch(targetView);
+        }
+
+    }
+
+    public void storeLastViewInCheckoutInfo()
+    {
+        CheckoutInfo.getInstance().lastViewBeofreCheckout = previousView.get(previousView.size() - 1);
+    }
     private void executeViewSwitch(CurrentViewInfo target)
     {
         currentView = target;
@@ -287,12 +303,8 @@ public class MainViewController implements Initializable {
         shopController.setEco(ecoEnabled);
     }
 
-    public double getTotalCost()
-    {
-        return MathF.twoDecimans(IMatDataHandler.getInstance().getShoppingCart().getTotal() + fines);
-    }
 
-    private class CurrentViewInfo{
+    public class CurrentViewInfo{
         public Product targetProduct = null;
         public view targetView;
         public String targetString= null;
