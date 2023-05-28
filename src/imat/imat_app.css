@@ -191,3 +191,8 @@
     -fx-font-weight: bold;
     -fx-font-size: 40px;
 }
+
+.list-item-outline{
+    -fx-border: 0;
+    -fx-border-color: transparent transparent #79747E transparent;
+}

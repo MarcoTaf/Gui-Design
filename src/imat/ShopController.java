@@ -93,7 +93,7 @@ public class ShopController extends SubViewController {
         List<Product> products;
         List<Product> productsUnsorted;
 
-        if ((searchTemrs == null) && sortingMode == sortMode.none && !(ecoEnabled) && !owner.favoritesEnabled)
+        if ((searchTemrs == null) && sortingMode == sortMode.none && !(ecoEnabled) && !owner.favoritesEnabled && currentCategory == null)
         {
             feature.setPrefWidth(productFlowPane.getPrefWidth());
             feature.productImage.setFitWidth(productFlowPane.getPrefWidth());

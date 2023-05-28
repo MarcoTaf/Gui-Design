@@ -1,6 +1,7 @@
 package imat;
 
 import javafx.scene.control.Label;
+import javafx.scene.control.Separator;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
@@ -32,6 +33,8 @@ public class PreviousPurchaseDetailController extends SubViewController{
             itemCard.setPrefWidth(cartFlowPane.getPrefWidth());
             cartFlowPane.getChildren().add(itemCard);
             totalPrice += items.get(i).getTotal();
+
+
         }
 
         totalCostLabel.setText("Total pris: " + String.valueOf(MathF.twoDecimans(totalPrice)) +  " Kr");
