@@ -125,7 +125,7 @@ public class CheckoutPaymentController extends CheckoutViewsController{
             cardNumError.setText("Kortnummret får inte vara tomt");
             canSwitch = false;
         }else if (!(card.getCardNumber().length() == 16))
-        {cardNumError.setText("Kortnummret måste vara 16 nummer långt");
+        {cardNumError.setText("Kortnummret måste vara 16 nummer");
             canSwitch = false;}
         else{
             cardNumError.setText("");
@@ -136,7 +136,7 @@ public class CheckoutPaymentController extends CheckoutViewsController{
             canSwitch = false;
         }else if (!(String.valueOf(card.getValidMonth()).length() == 2) || !(String.valueOf(card.getValidYear()).length() == 2))
              {
-                 MMÅÅError.setText("YY/MM måste vara 2 nummer långa");
+                 MMÅÅError.setText("YY/MM måste vara 2 nummer");
         canSwitch = false;
              }else{
             MMÅÅError.setText("");
@@ -147,7 +147,7 @@ public class CheckoutPaymentController extends CheckoutViewsController{
             canSwitch = false;
         }else if (!(String.valueOf(card.getVerificationCode()).length() == 3))
         {
-            CVCError.setText("CVC nummret måste vara 3 nummer långt");
+            CVCError.setText("CVC nummret måste vara 3 nummer");
             canSwitch = false;
         }
         else{

@@ -21,6 +21,7 @@ public class ShoppingCartListController extends SubViewController{
     public FlowPane itemFlowPane;
     @FXML
     public Text totalPrice;
+    public Label cartIsEmptyError;
 
     public ShoppingCartListController(MainViewController owner)
     {
@@ -31,6 +32,7 @@ public class ShoppingCartListController extends SubViewController{
 
     public void updateList()
     {
+        cartIsEmptyError.setText("");
         itemFlowPane.getChildren().clear();
 
         double totalCost = 0;
@@ -50,8 +52,13 @@ public class ShoppingCartListController extends SubViewController{
 
     public void goToCheckout()
     {
-        owner.storeLastViewInCheckoutInfo();
-        owner.switchView(MainViewController.view.checkoutCart
-        );
+        if (IMatDataHandler.getInstance().getShoppingCart().getItems().size() > 0) {
+            owner.storeLastViewInCheckoutInfo();
+            owner.switchView(MainViewController.view.checkoutCart);
+        }
+        else
+        {
+            cartIsEmptyError.setText("Varukorgen är tom");
+        }
     }
 }

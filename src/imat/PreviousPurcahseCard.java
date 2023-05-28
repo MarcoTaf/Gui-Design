@@ -52,6 +52,11 @@ public class PreviousPurcahseCard extends SubViewController{
 
     private void addRandImg(ImageView target)
     {
+        if (targetOrder.getItems().size() == 0)
+        {
+            throw new RuntimeException("Had an order with 0 items in it, check what went wrong in files, this should have been prevented");
+        }
+
         target.setImage(IMatDataHandler.getInstance().getFXImage(targetOrder.getItems().get(new Random().nextInt(targetOrder.getItems().size())).getProduct()));
     }
 

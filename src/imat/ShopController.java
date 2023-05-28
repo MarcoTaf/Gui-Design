@@ -33,6 +33,11 @@ public class ShopController extends SubViewController {
         setupProductCardDB();
         List<Product> products = IMatDataHandler.getInstance().getProducts();
 
+        if (products.size() == 0)
+        {
+            throw new RuntimeException("Product list is empty. Check files");
+        }
+
         Product featureProduct = products.get(new Random().nextInt(products.size()));
         feature = new ProductFeature(owner, featureProduct);
 
@@ -88,7 +93,7 @@ public class ShopController extends SubViewController {
         List<Product> products;
         List<Product> productsUnsorted;
 
-        if ((searchTemrs == null) && sortingMode == sortMode.none && !(ecoEnabled))
+        if ((searchTemrs == null) && sortingMode == sortMode.none && !(ecoEnabled) && !owner.favoritesEnabled)
         {
             feature.setPrefWidth(productFlowPane.getPrefWidth());
             feature.productImage.setFitWidth(productFlowPane.getPrefWidth());

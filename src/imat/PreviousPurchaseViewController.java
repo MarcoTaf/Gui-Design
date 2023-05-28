@@ -25,7 +25,9 @@ public class PreviousPurchaseViewController extends SubViewController{
 
         for (int i = 0; i < orders.size(); i++)
         {
-            orderFlowPane.getChildren().add(new PreviousPurcahseCard(owner, orders.get(i)));
+            if (orders.get(i).getItems().size() > 0) {
+                orderFlowPane.getChildren().add(new PreviousPurcahseCard(owner, orders.get(i)));
+            }
         }
     }
 }
