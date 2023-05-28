@@ -170,7 +170,7 @@
             <String fx:value="text-25px-normal" />
          </styleClass>
       </Button>
-      <Label fx:id="nameError" layoutX="1104.0" layoutY="548.0" prefHeight="77.0" prefWidth="200.0" styleClass="text-25px-normal" text="Fyll i alla fält" textFill="RED" AnchorPane.leftAnchor="1290.0">
+      <Label fx:id="nameError" layoutX="1099.0" layoutY="548.0" prefHeight="77.0" prefWidth="610.0" styleClass="text-20px-normal" text="Fyll i alla fält" textFill="RED" AnchorPane.leftAnchor="1099.0">
          <font>
             <Font size="68.0" />
          </font>

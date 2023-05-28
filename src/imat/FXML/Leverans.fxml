@@ -148,8 +148,8 @@
       <Text fx:id="dateText" layoutX="1097.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Valt datum" wrappingWidth="163.0" AnchorPane.bottomAnchor="330.470703125" AnchorPane.leftAnchor="1097.0" />
       <Text fx:id="timeText" layoutX="1500.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Vald tid" wrappingWidth="153.0" AnchorPane.bottomAnchor="330.470703125" AnchorPane.leftAnchor="1500.0" />
       <Text fx:id="addedPrice" layoutX="1254.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Valt leveranssätt" textAlignment="CENTER" AnchorPane.bottomAnchor="606.470703125" AnchorPane.leftAnchor="1254.0" />
-      <Label fx:id="radioError" layoutX="400.0" layoutY="244.0" styleClass="text-20px-normal" text="Välj en" textAlignment="RIGHT" textFill="RED" AnchorPane.leftAnchor="400.0" />
-      <Label fx:id="dateError" layoutX="250.0" layoutY="606.0" styleClass="text-20px-normal" text="Välj ett datum" textAlignment="RIGHT" textFill="RED" AnchorPane.bottomAnchor="249.0" AnchorPane.leftAnchor="250.0" />
+      <Label fx:id="radioError" layoutX="400.0" layoutY="244.0" prefHeight="30.0" prefWidth="362.0" styleClass="text-20px-normal" text="Välj en" textAlignment="RIGHT" textFill="RED" AnchorPane.leftAnchor="400.0" />
+      <Label fx:id="dateError" layoutX="250.0" layoutY="606.0" prefHeight="30.0" prefWidth="558.0" styleClass="text-20px-normal" text="Välj ett datum" textAlignment="RIGHT" textFill="RED" AnchorPane.bottomAnchor="249.0" AnchorPane.leftAnchor="250.0" />
       <Text fx:id="deliveryCost" layoutX="1254.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-30px-normal" text="Text" />
       <Text layoutX="292.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-16px-normal" text="Kostnad: 99 kr" />
    </children>

@@ -151,37 +151,37 @@ public class CheckoutInfoController extends CheckoutViewsController {
     {
         if (customer.getFirstName() == "")
         {
-            nameError.setText("All fields must be filled");
+            nameError.setText("Alla fält måste fyllas");
             return;
         }
         if (customer.getLastName() == "")
         {
-            nameError.setText("All fields must be filled");
+            nameError.setText("Alla fält måste fyllas");
             return;
         }
         if (customer.getAddress() == "")
         {
-            nameError.setText("All fields must be filled");
+            nameError.setText("Alla fält måste fyllas");
             return;
         }
         if (customer.getPhoneNumber() == "")
         {
-            nameError.setText("All fields must be filled");
+            nameError.setText("Alla fält måste fyllas");
             return;
         }
         if (customer.getEmail() == "")
         {
-            nameError.setText("All fields must be filled");
+            nameError.setText("Alla fält måste fyllas");
             return;
         }
         if (customer.getPostCode() == "")
         {
-            nameError.setText("All fields must be filled");
+            nameError.setText("Alla fält måste fyllas");
             return;
         }
         if (customer.getPostAddress() == "")
         {
-            nameError.setText("All fields must be filled");
+            nameError.setText("Alla fält måste fyllas");
             return;
         }
 

@@ -44,7 +44,7 @@ public class CheckoutPaymentController extends CheckoutViewsController{
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
 
                 if (!(t1.matches("-?\\d+(.\\d+)?"))) {
-                    cardNumError.setText("The card number cannot contain letters");
+                    cardNumError.setText("Kortnummret får bara vara nummer");
                 }
                 else {
                     cardNumError.setText("");
@@ -60,7 +60,7 @@ public class CheckoutPaymentController extends CheckoutViewsController{
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
 
                 if (!(t1.matches("-?\\d+(.\\d+)?"))) {
-                    MMÅÅError.setText("The YY/MM fields cannot contain letters");
+                    MMÅÅError.setText("YY/MM fälten får bara vara nummer");
                 }
                 else {
                     MMÅÅError.setText("");
@@ -74,7 +74,7 @@ public class CheckoutPaymentController extends CheckoutViewsController{
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 if (!(t1.matches("-?\\d+(.\\d+)?"))) {
-                    MMÅÅError.setText("The YY/MM fields cannot contain letters");
+                    MMÅÅError.setText("YY/MM fälten får bara vara nummer");
                 }
                 else {
                     MMÅÅError.setText("");
@@ -88,7 +88,7 @@ public class CheckoutPaymentController extends CheckoutViewsController{
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 if (!(t1.matches("-?\\d+(.\\d+)?"))) {
-                    CVCError.setText("The CVC number cannot contain letters");
+                    CVCError.setText("CVC nummret får bara vara nummer");
                 }
                 else {
                     CVCError.setText("");
@@ -122,32 +122,32 @@ public class CheckoutPaymentController extends CheckoutViewsController{
         boolean canSwitch = true;
 
         if (card.getCardNumber().equals("")) {
-            cardNumError.setText("The card number cannot be empty");
+            cardNumError.setText("Kortnummret får inte vara tomt");
             canSwitch = false;
         }else if (!(card.getCardNumber().length() == 16))
-        {cardNumError.setText("The card number must contain 16 digits");
+        {cardNumError.setText("Kortnummret måste vara 16 nummer långt");
             canSwitch = false;}
         else{
             cardNumError.setText("");
         }
 
         if (String.valueOf(card.getValidMonth()).equals("") || String.valueOf(card.getValidYear()).equals("")) {
-            MMÅÅError.setText("The YY/MM fields cannot be empty");
+            MMÅÅError.setText("YY/MM fälten får inte vara tomma");
             canSwitch = false;
         }else if (!(String.valueOf(card.getValidMonth()).length() == 2) || !(String.valueOf(card.getValidYear()).length() == 2))
              {
-                 MMÅÅError.setText("The YY/MM fields must contain 2 digits");
+                 MMÅÅError.setText("YY/MM måste vara 2 nummer långa");
         canSwitch = false;
              }else{
             MMÅÅError.setText("");
         }
 
         if (String.valueOf(card.getVerificationCode()).equals("")) {
-            CVCError.setText("The CVC number cannot be empty");
+            CVCError.setText("CVC nummret får inte vara tomt");
             canSwitch = false;
         }else if (!(String.valueOf(card.getVerificationCode()).length() == 3))
         {
-            CVCError.setText("The CVC number must contain 3 digits");
+            CVCError.setText("CVC nummret måste vara 3 nummer långt");
             canSwitch = false;
         }
         else{
