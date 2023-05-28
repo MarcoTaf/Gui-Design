@@ -47,7 +47,7 @@ public class PreviousPurchaseDetailItem extends SubViewController{
         Product product = targetItem.getProduct();
         Produktnamn.setText(product.getName());
         VarukorgDDImage.setImage(database.getFXImage(product));
-        priceText.setText(String.valueOf(targetItem.getTotal()) + " kr");
+        priceText.setText(String.valueOf(MathF.twoDecimans(targetItem.getTotal())) + " kr");
         amountInCart.setText(String.valueOf(targetItem.getAmount()) + " st");
 
     }

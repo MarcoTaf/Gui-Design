@@ -56,7 +56,8 @@ public class DetailViewController extends SubViewController{
 
         image.setImage(database.getFXImage(targetProduct));
         productNamn.setText(targetProduct.getName());
-        priceLabel.setText("Pris: " + targetProduct.getPrice() + " " +  targetProduct.getUnit());
+
+        priceLabel.setText("Pris: " + String.valueOf(MathF.twoDecimans(targetProduct.getPrice()))+ " " +  targetProduct.getUnit());
         updateAmountText();
 
     }

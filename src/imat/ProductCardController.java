@@ -78,7 +78,7 @@ public class ProductCardController extends SubViewController
        {
            productName.setText(targetProduct.getName());
            productDesc.setText(targetProduct.getUnit());
-           productPrice.setText(String.valueOf(targetProduct.getPrice()) + " " + targetProduct.getUnit());
+           productPrice.setText(String.valueOf(MathF.twoDecimans(targetProduct.getPrice())) + " " + targetProduct.getUnit());
            productPriceWithoutDiscount.setText("");
 
 

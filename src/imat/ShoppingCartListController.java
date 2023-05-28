@@ -45,7 +45,7 @@ public class ShoppingCartListController extends SubViewController{
             totalCost += items.get(i).getTotal();
 
         }
-        totalPrice.setText("Pris: " + String.valueOf(totalCost) + " kr");
+        totalPrice.setText("Pris: " + String.valueOf(MathF.twoDecimans(totalCost)) + " kr");
 
     }
 

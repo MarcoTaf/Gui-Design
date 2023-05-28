@@ -45,8 +45,8 @@ public class ShoppingCartListItemController extends SubViewController{
         Produktnamn.setText(product.getName());
         VarukorgDDImage.setImage(database.getFXImage(product));
         amountInCart.setText(String.valueOf((int) targetItem.getAmount()) + " st");
-        priceText.setText(String.valueOf(targetItem.getTotal()) + " kr");
-        prisperstyck.setText(String.valueOf(targetItem.getProduct().getPrice()) + " " + targetItem.getProduct().getUnit());
+        priceText.setText(String.valueOf(MathF.twoDecimans(targetItem.getTotal())) + " kr");
+        prisperstyck.setText(String.valueOf(MathF.twoDecimans(targetItem.getProduct().getPrice())) + " " + targetItem.getProduct().getUnit());
     }
 
     public void addToSelf()

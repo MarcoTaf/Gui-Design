@@ -46,10 +46,10 @@ public class CheckoutConfirmController extends CheckoutViewsController{
             item.setPrefWidth(productFlowpane.getPrefWidth());
             productFlowpane.getChildren().add(item);
         }
-        PrisSummaVaror.setText(String.valueOf(cart.getTotal()) + " kr");
-        PrisLeveranssätt.setText(String.valueOf(CheckoutInfo.getInstance().fines) + " kr");
-        TotalPris.setText(String.valueOf(CheckoutInfo.getInstance().getTotal()) + " kr");
-        Prismoms.setText(String.valueOf(cart.getTotal()/4) + " kr");
+        PrisSummaVaror.setText(String.valueOf(MathF.twoDecimans(cart.getTotal())) + " kr");
+        PrisLeveranssätt.setText(String.valueOf(MathF.twoDecimans(CheckoutInfo.getInstance().fines)) + " kr");
+        TotalPris.setText(String.valueOf(MathF.twoDecimans(CheckoutInfo.getInstance().getTotal())) + " kr");
+        Prismoms.setText(String.valueOf(MathF.twoDecimans(cart.getTotal()/4)) + " kr");
         String cardNum = IMatDataHandler.getInstance().getCreditCard().getCardNumber();
         cardNum = cardNum.substring(cardNum.length()-4);
         DittKortnummer.setText("**** **** **** " + cardNum);
