@@ -32,7 +32,11 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <Button layoutX="382.0" layoutY="780.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="57.0" prefWidth="110.0" styleClass="button-modify-add-to-cart" text="Add To Cart" />
+      <Button layoutX="382.0" layoutY="780.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="57.0" prefWidth="171.0" text="Lägg i korg">
+         <styleClass>
+            <String fx:value="button-modify-add-to-cart" />
+            <String fx:value="text-20px-normal" />
+         </styleClass></Button>
       <Button layoutX="1563.0" layoutY="47.0" mnemonicParsing="false" onAction="#exitView" prefHeight="31.0" prefWidth="35.0">
          <styleClass>
             <String fx:value="invisible-button" />

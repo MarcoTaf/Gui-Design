@@ -39,9 +39,9 @@ public class ShopController extends SubViewController {
         updateShopContents(null, currentCategory, ecoEnabled, sortingMode);
 
         ProductCategory[] categories = ProductCategory.values();
-        String[] buttonNames = {"Ärtor", "Bröd", "Bär", "Citrus Frukt", "Varma drycker", "Kalla drycker", "Exotiska frukter",
-        "Fisk", "Grönsaker och Frukt", "Salad","Kött", "Mejeri", "Meloner", "Mjöl, Socker och salt", "nötter och frön", "Pasta", "Potatis och ris",
-        "Rot Grönsaker", "Frukt", "Sött", "Herber"};
+        String[] buttonNames = {"Ärtor", "Bröd", "Bär", "Citrusfrukt", "Varma drycker", "Kalla drycker", "Exotiska frukter",
+        "Fisk", "Grönsaker och Frukt", "Sallad","Kött", "Mejeri", "Meloner", "Mjöl, Socker och salt", "Nötter och Frön", "Pasta", "Potatis och ris",
+        "Rotfrukterr", "Frukt", "Sött", "Örter"};
 
         for (int i = 0; i < categories.length; i++)
         {
