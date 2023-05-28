@@ -22,7 +22,7 @@
                         <Font name="Arial Bold" size="50.0" />
                      </font>
                   </Text>
-                  <Button layoutX="455.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="32.0" styleClass="invisible-button" stylesheets="@../imat_app.css" textAlignment="CENTER" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+                  <Button layoutX="455.0" layoutY="-2.0" mnemonicParsing="false" onAction="#exitView" prefHeight="44.0" prefWidth="32.0" styleClass="invisible-button" stylesheets="@../imat_app.css" textAlignment="CENTER" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
                      <font>
                         <Font size="20.0" />
                      </font>
