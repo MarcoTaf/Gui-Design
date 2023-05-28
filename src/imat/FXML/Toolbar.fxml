@@ -49,10 +49,17 @@
                         <font>
                            <Font size="30.0" />
                         </font></TextField>
-                     <Button layoutX="1863.0" layoutY="4.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="64.0" prefWidth="64.0" styleClass="invisible-button" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <Button layoutX="1863.0" layoutY="4.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="50.0" prefWidth="38.0" styleClass="invisible-button" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                         <font>
                            <Font name="System Bold" size="25.0" />
                         </font>
+                        <graphic>
+                           <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../resources/icon_close.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
                      </Button>
                </children>
             </AnchorPane>

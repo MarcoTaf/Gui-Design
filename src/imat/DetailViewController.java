@@ -43,7 +43,7 @@ public class DetailViewController extends SubViewController{
     public void setProduct(Product target)
     {
         this.targetProduct = target;
-        amountToAdd = 0;
+        amountToAdd = 1;
         updateVisuals();
     }
 
@@ -56,7 +56,7 @@ public class DetailViewController extends SubViewController{
 
         image.setImage(database.getFXImage(targetProduct));
         productNamn.setText(targetProduct.getName());
-        priceLabel.setText("Pris:" + targetProduct.getPrice() + " " +  targetProduct.getUnit());
+        priceLabel.setText("Pris: " + targetProduct.getPrice() + " " +  targetProduct.getUnit());
         updateAmountText();
 
     }
@@ -75,7 +75,7 @@ public class DetailViewController extends SubViewController{
 
     public void removeFromAdd()
     {
-        if (amountToAdd > 0)
+        if (amountToAdd > 1)
         {
             amountToAdd--;
             updateAmountText();
@@ -88,7 +88,7 @@ public class DetailViewController extends SubViewController{
             ShoppingItem item = new ShoppingItem(targetProduct, amountToAdd);
             shoppingCart.addItem(item, true);
 
-            amountToAdd = 0;
+            amountToAdd = 1;
             updateAmountText();
         }
     }

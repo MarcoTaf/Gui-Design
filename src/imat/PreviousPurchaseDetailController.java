@@ -23,7 +23,7 @@ public class PreviousPurchaseDetailController extends SubViewController{
         cartFlowPane.getChildren().clear();
         this.targetOrder = targetOrder;
         List<ShoppingItem> items = targetOrder.getItems();
-        float totalPrice = 0;
+        double totalPrice = 0;
 
         for (int i = 0; i < items.size(); i++)
         {
@@ -34,7 +34,7 @@ public class PreviousPurchaseDetailController extends SubViewController{
             totalPrice += items.get(i).getTotal();
         }
 
-        totalCostLabel.setText("Total pris: " + String.valueOf(totalPrice) +  " Kr");
+        totalCostLabel.setText("Total pris: " + String.valueOf(MathF.twoDecimans(totalPrice)) +  " Kr");
     }
 
     public void addToCart()

@@ -30,7 +30,7 @@ public class CheckoutItemsController extends CheckoutViewsController{
         {
             cartFlowPane.getChildren().add(new checkoutCartItem(owner, this, items.get(i)));
         }
-        totalCostLabel.setText(String.valueOf(IMatDataHandler.getInstance().getShoppingCart().getTotal()));
+        totalCostLabel.setText("Totalt Pris: " + String.valueOf(IMatDataHandler.getInstance().getShoppingCart().getTotal()) + " kr");
     }
 
     public void exitCheckout()

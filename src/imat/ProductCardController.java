@@ -52,6 +52,7 @@ public class ProductCardController extends SubViewController
        public ImageView favoriteImage;
        @FXML
        public ImageView isEcoImage;
+
        public ProductCardController(Product targetProduct, MainViewController owner) {
            super("ProductCard.fxml", owner);
            this.owner = owner;

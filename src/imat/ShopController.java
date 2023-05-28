@@ -1,22 +1,16 @@
 package imat;
 
-import com.sun.tools.javac.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.text.TextAlignment;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
-import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.Flow;
 
 public class ShopController extends SubViewController {
     private MainViewController parent;
@@ -27,6 +21,7 @@ public class ShopController extends SubViewController {
     private sortMode sortingMode = sortMode.none;
 
     private HashMap<String, String> categoryNames = new HashMap<String, String>();
+    private ProductFeature feature;
 
     @FXML
     public FlowPane productFlowPane;
@@ -36,6 +31,11 @@ public class ShopController extends SubViewController {
     {
         super("Kategorilista.fxml", owner);
         setupProductCardDB();
+        List<Product> products = IMatDataHandler.getInstance().getProducts();
+
+        Product featureProduct = products.get(new Random().nextInt(products.size()));
+        feature = new ProductFeature(owner, featureProduct);
+
         updateShopContents(null, currentCategory, ecoEnabled, sortingMode);
 
         ProductCategory[] categories = ProductCategory.values();
@@ -87,6 +87,14 @@ public class ShopController extends SubViewController {
 
         List<Product> products;
         List<Product> productsUnsorted;
+
+        if ((searchTemrs == null) && sortingMode == sortMode.none && !(ecoEnabled))
+        {
+            feature.setPrefWidth(productFlowPane.getPrefWidth());
+            feature.productImage.setFitWidth(productFlowPane.getPrefWidth());
+            productFlowPane.getChildren().add(feature);
+
+        }
         if (searchTemrs == null)
         {
             productsUnsorted = new ArrayList<Product>(database.getProducts());

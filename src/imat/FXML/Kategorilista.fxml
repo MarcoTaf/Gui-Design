@@ -28,7 +28,7 @@
       </StackPane>
          <ScrollPane layoutX="370.0" prefHeight="808.0" prefWidth="1475.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
             <content>
-               <FlowPane fx:id="productFlowPane" hgap="40.0" prefHeight="883.0" prefWidth="1547.0" vgap="40.0" />
+               <FlowPane fx:id="productFlowPane" alignment="BASELINE_CENTER" hgap="40.0" prefHeight="811.0" prefWidth="1548.0" vgap="40.0" />
             </content>
          </ScrollPane>
          <AnchorPane prefHeight="72.0" prefWidth="1548.0" style="-fx-background-color: #FFE5E5;" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">

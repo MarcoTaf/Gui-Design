@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<fx:root fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showDetailView" prefHeight="392.0" prefWidth="426.0" styleClass="previous-purchase-card" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showDetailView" prefHeight="392.0" prefWidth="426.0" styleClass="previous-purchase-card" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="productImage" fitHeight="219.0" fitWidth="422.0" layoutX="2.0" pickOnBounds="true" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane layoutX="11.0" layoutY="282.0" prefHeight="52.0" prefWidth="403.0" style="-fx-background-color: #F8BDBD;" styleClass="product-add-to-card-background" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
          <children>
-            <Button fx:id="productRemoveFromAdd" layoutY="6.0" mnemonicParsing="false" onAction="#removeFromAdd" prefHeight="54.0" prefWidth="54.0" styleClass="button-modify-add-to-cart" text="-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="productRemoveFromAdd" layoutY="6.0" mnemonicParsing="false" onAction="#removeFromAdd" prefHeight="54.0" prefWidth="54.0" text="-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <styleClass>
+                  <String fx:value="button-modify-add-to-cart" />
+                  <String fx:value="text-20px-normal" />
+               </styleClass></Button>
             <Text fx:id="productAddAmount" layoutX="54.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-16px-normal" text="x st" textAlignment="CENTER" wrappingWidth="74.0" AnchorPane.bottomAnchor="16.984375" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="15.015625" />
-            <Button fx:id="productAddToAdd" layoutX="134.0" layoutY="-1.0" minHeight="54.0" mnemonicParsing="false" onAction="#addToAdd" prefWidth="54.0" styleClass="button-modify-add-to-cart" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="productAddToAdd" layoutX="134.0" layoutY="-1.0" minHeight="54.0" mnemonicParsing="false" onAction="#addToAdd" prefWidth="54.0" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="0.0">
+               <styleClass>
+                  <String fx:value="button-modify-add-to-cart" />
+                  <String fx:value="text-20px-normal" />
+               </styleClass></Button>
             <Button fx:id="productAddToCart" layoutX="127.0" layoutY="6.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="54.0" prefWidth="156.0" text="Lägg i korg" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font name="Arial" size="36.0" />

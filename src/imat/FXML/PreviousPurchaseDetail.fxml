@@ -6,15 +6,17 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.ColorInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exitView" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080808;" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exitView" prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #0808080F;" stylesheets="@../imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <StackPane prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080808;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <StackPane prefHeight="885.0" prefWidth="1920.0" style="-fx-background-color: #08080880;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <effect>
             <ColorInput paint="WHITE" width="255.0" />
          </effect>
@@ -31,11 +33,18 @@
          </font>
       </Label>
       <Button layoutX="382.0" layoutY="780.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="57.0" prefWidth="110.0" styleClass="button-modify-add-to-cart" text="Add To Cart" />
-      <Button layoutX="1561.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="X">
+      <Button layoutX="1563.0" layoutY="47.0" mnemonicParsing="false" onAction="#exitView" prefHeight="31.0" prefWidth="35.0">
          <styleClass>
             <String fx:value="invisible-button" />
             <String fx:value="text-20px-normal" />
          </styleClass>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icon_close.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
    </children>
    <effect>
